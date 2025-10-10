@@ -924,6 +924,38 @@
     "@noSearchResults": {
         "description": "Message displayed when a search returns no results."
     },
+    "searchRooms": "रूम खोजें...",
+    "@searchRooms": {
+        "description": "Placeholder text for room search input field."
+    },
+    "searchingRooms": "रूम खोजे जा रहे हैं...",
+    "@searchingRooms": {
+        "description": "Loading message shown while searching for rooms."
+    },
+    "clearSearch": "खोज साफ़ करें",
+    "@clearSearch": {
+        "description": "Text for button to clear search results."
+    },
+    "searchError": "खोज त्रुटि",
+    "@searchError": {
+        "description": "Title for search error messages."
+    },
+    "searchRoomsError": "कमरों की खोज असफल हुई। कृपया दोबारा कोशिश करें।",
+    "@searchRoomsError": {
+        "description": "Error message when room search fails."
+    },
+    "searchUpcomingRoomsError": "आगामी कमरों की खोज असफल हुई। कृपया दोबारा कोशिश करें।",
+    "@searchUpcomingRoomsError": {
+        "description": "Error message when upcoming room search fails."
+    },
+    "search": "खोजें",
+    "@search": {
+        "description": "Tooltip text for search button."
+    },
+    "clear": "साफ़ करें",
+    "@clear": {
+        "description": "Tooltip text for clear button."
+    },
     "shareRoomMessage": "🚀 इस शानदार रूम को देखें: {roomName}!\n\n📖 विवरण: {description}\n👥 अभी {participants} लोग जुड़ चुके हैं!",
     "@shareRoomMessage": {
         "description": "The default message template used when sharing a room.",
