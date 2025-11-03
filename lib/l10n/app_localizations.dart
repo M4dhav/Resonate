@@ -96,10 +96,10 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('mr'),
     Locale('en'),
     Locale('gu'),
     Locale('hi'),
+    Locale('mr'),
   ];
 
   /// The title of the application.
@@ -2386,7 +2386,7 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      <String>['mr', 'en', 'gu', 'hi'].contains(locale.languageCode);
+      <String>['en', 'gu', 'hi', 'mr'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -2395,14 +2395,14 @@ class _AppLocalizationsDelegate
 AppLocalizations lookupAppLocalizations(Locale locale) {
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'mr':
-      return AppLocalizationsMr();
     case 'en':
       return AppLocalizationsEn();
     case 'gu':
       return AppLocalizationsGu();
     case 'hi':
       return AppLocalizationsHi();
+    case 'mr':
+      return AppLocalizationsMr();
   }
 
   throw FlutterError(

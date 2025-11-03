@@ -82,4 +82,3 @@ jobs:
           artifactContentType: apk
           generateReleaseNotes: true
           tag: latest_build
-          token: ${{ secrets.GITHUB_TOKEN }}
