@@ -347,7 +347,6 @@ class UpcomingRoomsController extends GetxController {
       collectionId: upcomingRoomsCollectionId,
       documentId: upcomingRoomId,
     );
-    await getUpcomingRooms();
     deleteAllDeletedUpcomingRoomsSubscribers(upcomingRoomId);
   }
 
