@@ -27,43 +27,55 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
+// ignore_for_file: invalid_use_of_internal_member
 
 class _FakeClient_0 extends _i1.SmartFake implements _i2.Client {
   _FakeClient_0(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
 
-class _FakeDocumentList_1 extends _i1.SmartFake implements _i3.DocumentList {
-  _FakeDocumentList_1(Object parent, Invocation parentInvocation)
+class _FakeTransactionList_1 extends _i1.SmartFake
+    implements _i3.TransactionList {
+  _FakeTransactionList_1(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
 
-class _FakeDocument_2 extends _i1.SmartFake implements _i3.Document {
-  _FakeDocument_2(Object parent, Invocation parentInvocation)
+class _FakeTransaction_2 extends _i1.SmartFake implements _i3.Transaction {
+  _FakeTransaction_2(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
 
-class _FakeRealtimeSubscription_3 extends _i1.SmartFake
+class _FakeRowList_3 extends _i1.SmartFake implements _i3.RowList {
+  _FakeRowList_3(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
+class _FakeRow_4 extends _i1.SmartFake implements _i3.Row {
+  _FakeRow_4(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
+class _FakeRealtimeSubscription_5 extends _i1.SmartFake
     implements _i4.RealtimeSubscription {
-  _FakeRealtimeSubscription_3(Object parent, Invocation parentInvocation)
+  _FakeRealtimeSubscription_5(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
 
-class _FakeExecutionList_4 extends _i1.SmartFake implements _i3.ExecutionList {
-  _FakeExecutionList_4(Object parent, Invocation parentInvocation)
+class _FakeExecutionList_6 extends _i1.SmartFake implements _i3.ExecutionList {
+  _FakeExecutionList_6(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
 
-class _FakeExecution_5 extends _i1.SmartFake implements _i3.Execution {
-  _FakeExecution_5(Object parent, Invocation parentInvocation)
+class _FakeExecution_7 extends _i1.SmartFake implements _i3.Execution {
+  _FakeExecution_7(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
 
-/// A class which mocks [Databases].
+/// A class which mocks [TablesDB].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockDatabases extends _i1.Mock implements _i5.Databases {
-  MockDatabases() {
+class MockTablesDB extends _i1.Mock implements _i5.TablesDB {
+  MockTablesDB() {
     _i1.throwOnMissingStub(this);
   }
 
@@ -76,166 +88,362 @@ class MockDatabases extends _i1.Mock implements _i5.Databases {
           as _i2.Client);
 
   @override
-  _i6.Future<_i3.DocumentList> listDocuments({
-    required String? databaseId,
-    required String? collectionId,
-    List<String>? queries,
+  _i6.Future<_i3.TransactionList> listTransactions({List<String>? queries}) =>
+      (super.noSuchMethod(
+            Invocation.method(#listTransactions, [], {#queries: queries}),
+            returnValue: _i6.Future<_i3.TransactionList>.value(
+              _FakeTransactionList_1(
+                this,
+                Invocation.method(#listTransactions, [], {#queries: queries}),
+              ),
+            ),
+          )
+          as _i6.Future<_i3.TransactionList>);
+
+  @override
+  _i6.Future<_i3.Transaction> createTransaction({int? ttl}) =>
+      (super.noSuchMethod(
+            Invocation.method(#createTransaction, [], {#ttl: ttl}),
+            returnValue: _i6.Future<_i3.Transaction>.value(
+              _FakeTransaction_2(
+                this,
+                Invocation.method(#createTransaction, [], {#ttl: ttl}),
+              ),
+            ),
+          )
+          as _i6.Future<_i3.Transaction>);
+
+  @override
+  _i6.Future<_i3.Transaction> getTransaction({
+    required String? transactionId,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(#listDocuments, [], {
-              #databaseId: databaseId,
-              #collectionId: collectionId,
-              #queries: queries,
+            Invocation.method(#getTransaction, [], {
+              #transactionId: transactionId,
             }),
-            returnValue: _i6.Future<_i3.DocumentList>.value(
-              _FakeDocumentList_1(
+            returnValue: _i6.Future<_i3.Transaction>.value(
+              _FakeTransaction_2(
                 this,
-                Invocation.method(#listDocuments, [], {
-                  #databaseId: databaseId,
-                  #collectionId: collectionId,
-                  #queries: queries,
+                Invocation.method(#getTransaction, [], {
+                  #transactionId: transactionId,
                 }),
               ),
             ),
           )
-          as _i6.Future<_i3.DocumentList>);
+          as _i6.Future<_i3.Transaction>);
 
   @override
-  _i6.Future<_i3.Document> createDocument({
-    required String? databaseId,
-    required String? collectionId,
-    required String? documentId,
-    required Map<dynamic, dynamic>? data,
-    List<String>? permissions,
+  _i6.Future<_i3.Transaction> updateTransaction({
+    required String? transactionId,
+    bool? commit,
+    bool? rollback,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(#createDocument, [], {
-              #databaseId: databaseId,
-              #collectionId: collectionId,
-              #documentId: documentId,
-              #data: data,
-              #permissions: permissions,
+            Invocation.method(#updateTransaction, [], {
+              #transactionId: transactionId,
+              #commit: commit,
+              #rollback: rollback,
             }),
-            returnValue: _i6.Future<_i3.Document>.value(
-              _FakeDocument_2(
+            returnValue: _i6.Future<_i3.Transaction>.value(
+              _FakeTransaction_2(
                 this,
-                Invocation.method(#createDocument, [], {
-                  #databaseId: databaseId,
-                  #collectionId: collectionId,
-                  #documentId: documentId,
-                  #data: data,
-                  #permissions: permissions,
+                Invocation.method(#updateTransaction, [], {
+                  #transactionId: transactionId,
+                  #commit: commit,
+                  #rollback: rollback,
                 }),
               ),
             ),
           )
-          as _i6.Future<_i3.Document>);
+          as _i6.Future<_i3.Transaction>);
 
   @override
-  _i6.Future<_i3.Document> getDocument({
-    required String? databaseId,
-    required String? collectionId,
-    required String? documentId,
-    List<String>? queries,
-  }) =>
+  _i6.Future<dynamic> deleteTransaction({required String? transactionId}) =>
       (super.noSuchMethod(
-            Invocation.method(#getDocument, [], {
-              #databaseId: databaseId,
-              #collectionId: collectionId,
-              #documentId: documentId,
-              #queries: queries,
-            }),
-            returnValue: _i6.Future<_i3.Document>.value(
-              _FakeDocument_2(
-                this,
-                Invocation.method(#getDocument, [], {
-                  #databaseId: databaseId,
-                  #collectionId: collectionId,
-                  #documentId: documentId,
-                  #queries: queries,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i3.Document>);
-
-  @override
-  _i6.Future<_i3.Document> upsertDocument({
-    required String? databaseId,
-    required String? collectionId,
-    required String? documentId,
-    required Map<dynamic, dynamic>? data,
-    List<String>? permissions,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#upsertDocument, [], {
-              #databaseId: databaseId,
-              #collectionId: collectionId,
-              #documentId: documentId,
-              #data: data,
-              #permissions: permissions,
-            }),
-            returnValue: _i6.Future<_i3.Document>.value(
-              _FakeDocument_2(
-                this,
-                Invocation.method(#upsertDocument, [], {
-                  #databaseId: databaseId,
-                  #collectionId: collectionId,
-                  #documentId: documentId,
-                  #data: data,
-                  #permissions: permissions,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i3.Document>);
-
-  @override
-  _i6.Future<_i3.Document> updateDocument({
-    required String? databaseId,
-    required String? collectionId,
-    required String? documentId,
-    Map<dynamic, dynamic>? data,
-    List<String>? permissions,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#updateDocument, [], {
-              #databaseId: databaseId,
-              #collectionId: collectionId,
-              #documentId: documentId,
-              #data: data,
-              #permissions: permissions,
-            }),
-            returnValue: _i6.Future<_i3.Document>.value(
-              _FakeDocument_2(
-                this,
-                Invocation.method(#updateDocument, [], {
-                  #databaseId: databaseId,
-                  #collectionId: collectionId,
-                  #documentId: documentId,
-                  #data: data,
-                  #permissions: permissions,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i3.Document>);
-
-  @override
-  _i6.Future<dynamic> deleteDocument({
-    required String? databaseId,
-    required String? collectionId,
-    required String? documentId,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#deleteDocument, [], {
-              #databaseId: databaseId,
-              #collectionId: collectionId,
-              #documentId: documentId,
+            Invocation.method(#deleteTransaction, [], {
+              #transactionId: transactionId,
             }),
             returnValue: _i6.Future<dynamic>.value(),
           )
           as _i6.Future<dynamic>);
+
+  @override
+  _i6.Future<_i3.Transaction> createOperations({
+    required String? transactionId,
+    List<Map<dynamic, dynamic>>? operations,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#createOperations, [], {
+              #transactionId: transactionId,
+              #operations: operations,
+            }),
+            returnValue: _i6.Future<_i3.Transaction>.value(
+              _FakeTransaction_2(
+                this,
+                Invocation.method(#createOperations, [], {
+                  #transactionId: transactionId,
+                  #operations: operations,
+                }),
+              ),
+            ),
+          )
+          as _i6.Future<_i3.Transaction>);
+
+  @override
+  _i6.Future<_i3.RowList> listRows({
+    required String? databaseId,
+    required String? tableId,
+    List<String>? queries,
+    String? transactionId,
+    bool? total,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#listRows, [], {
+              #databaseId: databaseId,
+              #tableId: tableId,
+              #queries: queries,
+              #transactionId: transactionId,
+              #total: total,
+            }),
+            returnValue: _i6.Future<_i3.RowList>.value(
+              _FakeRowList_3(
+                this,
+                Invocation.method(#listRows, [], {
+                  #databaseId: databaseId,
+                  #tableId: tableId,
+                  #queries: queries,
+                  #transactionId: transactionId,
+                  #total: total,
+                }),
+              ),
+            ),
+          )
+          as _i6.Future<_i3.RowList>);
+
+  @override
+  _i6.Future<_i3.Row> createRow({
+    required String? databaseId,
+    required String? tableId,
+    required String? rowId,
+    required Map<dynamic, dynamic>? data,
+    List<String>? permissions,
+    String? transactionId,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#createRow, [], {
+              #databaseId: databaseId,
+              #tableId: tableId,
+              #rowId: rowId,
+              #data: data,
+              #permissions: permissions,
+              #transactionId: transactionId,
+            }),
+            returnValue: _i6.Future<_i3.Row>.value(
+              _FakeRow_4(
+                this,
+                Invocation.method(#createRow, [], {
+                  #databaseId: databaseId,
+                  #tableId: tableId,
+                  #rowId: rowId,
+                  #data: data,
+                  #permissions: permissions,
+                  #transactionId: transactionId,
+                }),
+              ),
+            ),
+          )
+          as _i6.Future<_i3.Row>);
+
+  @override
+  _i6.Future<_i3.Row> getRow({
+    required String? databaseId,
+    required String? tableId,
+    required String? rowId,
+    List<String>? queries,
+    String? transactionId,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#getRow, [], {
+              #databaseId: databaseId,
+              #tableId: tableId,
+              #rowId: rowId,
+              #queries: queries,
+              #transactionId: transactionId,
+            }),
+            returnValue: _i6.Future<_i3.Row>.value(
+              _FakeRow_4(
+                this,
+                Invocation.method(#getRow, [], {
+                  #databaseId: databaseId,
+                  #tableId: tableId,
+                  #rowId: rowId,
+                  #queries: queries,
+                  #transactionId: transactionId,
+                }),
+              ),
+            ),
+          )
+          as _i6.Future<_i3.Row>);
+
+  @override
+  _i6.Future<_i3.Row> upsertRow({
+    required String? databaseId,
+    required String? tableId,
+    required String? rowId,
+    Map<dynamic, dynamic>? data,
+    List<String>? permissions,
+    String? transactionId,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#upsertRow, [], {
+              #databaseId: databaseId,
+              #tableId: tableId,
+              #rowId: rowId,
+              #data: data,
+              #permissions: permissions,
+              #transactionId: transactionId,
+            }),
+            returnValue: _i6.Future<_i3.Row>.value(
+              _FakeRow_4(
+                this,
+                Invocation.method(#upsertRow, [], {
+                  #databaseId: databaseId,
+                  #tableId: tableId,
+                  #rowId: rowId,
+                  #data: data,
+                  #permissions: permissions,
+                  #transactionId: transactionId,
+                }),
+              ),
+            ),
+          )
+          as _i6.Future<_i3.Row>);
+
+  @override
+  _i6.Future<_i3.Row> updateRow({
+    required String? databaseId,
+    required String? tableId,
+    required String? rowId,
+    Map<dynamic, dynamic>? data,
+    List<String>? permissions,
+    String? transactionId,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#updateRow, [], {
+              #databaseId: databaseId,
+              #tableId: tableId,
+              #rowId: rowId,
+              #data: data,
+              #permissions: permissions,
+              #transactionId: transactionId,
+            }),
+            returnValue: _i6.Future<_i3.Row>.value(
+              _FakeRow_4(
+                this,
+                Invocation.method(#updateRow, [], {
+                  #databaseId: databaseId,
+                  #tableId: tableId,
+                  #rowId: rowId,
+                  #data: data,
+                  #permissions: permissions,
+                  #transactionId: transactionId,
+                }),
+              ),
+            ),
+          )
+          as _i6.Future<_i3.Row>);
+
+  @override
+  _i6.Future<dynamic> deleteRow({
+    required String? databaseId,
+    required String? tableId,
+    required String? rowId,
+    String? transactionId,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#deleteRow, [], {
+              #databaseId: databaseId,
+              #tableId: tableId,
+              #rowId: rowId,
+              #transactionId: transactionId,
+            }),
+            returnValue: _i6.Future<dynamic>.value(),
+          )
+          as _i6.Future<dynamic>);
+
+  @override
+  _i6.Future<_i3.Row> decrementRowColumn({
+    required String? databaseId,
+    required String? tableId,
+    required String? rowId,
+    required String? column,
+    double? value,
+    double? min,
+    String? transactionId,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#decrementRowColumn, [], {
+              #databaseId: databaseId,
+              #tableId: tableId,
+              #rowId: rowId,
+              #column: column,
+              #value: value,
+              #min: min,
+              #transactionId: transactionId,
+            }),
+            returnValue: _i6.Future<_i3.Row>.value(
+              _FakeRow_4(
+                this,
+                Invocation.method(#decrementRowColumn, [], {
+                  #databaseId: databaseId,
+                  #tableId: tableId,
+                  #rowId: rowId,
+                  #column: column,
+                  #value: value,
+                  #min: min,
+                  #transactionId: transactionId,
+                }),
+              ),
+            ),
+          )
+          as _i6.Future<_i3.Row>);
+
+  @override
+  _i6.Future<_i3.Row> incrementRowColumn({
+    required String? databaseId,
+    required String? tableId,
+    required String? rowId,
+    required String? column,
+    double? value,
+    double? max,
+    String? transactionId,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#incrementRowColumn, [], {
+              #databaseId: databaseId,
+              #tableId: tableId,
+              #rowId: rowId,
+              #column: column,
+              #value: value,
+              #max: max,
+              #transactionId: transactionId,
+            }),
+            returnValue: _i6.Future<_i3.Row>.value(
+              _FakeRow_4(
+                this,
+                Invocation.method(#incrementRowColumn, [], {
+                  #databaseId: databaseId,
+                  #tableId: tableId,
+                  #rowId: rowId,
+                  #column: column,
+                  #value: value,
+                  #max: max,
+                  #transactionId: transactionId,
+                }),
+              ),
+            ),
+          )
+          as _i6.Future<_i3.Row>);
 }
 
 /// A class which mocks [Realtime].
@@ -258,11 +466,11 @@ class MockRealtime extends _i1.Mock implements _i7.Realtime {
   _i4.RealtimeSubscription subscribe(List<String>? channels) =>
       (super.noSuchMethod(
             Invocation.method(#subscribe, [channels]),
-            returnValue: _FakeRealtimeSubscription_3(
+            returnValue: _FakeRealtimeSubscription_5(
               this,
               Invocation.method(#subscribe, [channels]),
             ),
-            returnValueForMissingStub: _FakeRealtimeSubscription_3(
+            returnValueForMissingStub: _FakeRealtimeSubscription_5(
               this,
               Invocation.method(#subscribe, [channels]),
             ),
@@ -296,27 +504,31 @@ class MockFunctions extends _i1.Mock implements _i5.Functions {
   _i6.Future<_i3.ExecutionList> listExecutions({
     required String? functionId,
     List<String>? queries,
+    bool? total,
   }) =>
       (super.noSuchMethod(
             Invocation.method(#listExecutions, [], {
               #functionId: functionId,
               #queries: queries,
+              #total: total,
             }),
             returnValue: _i6.Future<_i3.ExecutionList>.value(
-              _FakeExecutionList_4(
+              _FakeExecutionList_6(
                 this,
                 Invocation.method(#listExecutions, [], {
                   #functionId: functionId,
                   #queries: queries,
+                  #total: total,
                 }),
               ),
             ),
             returnValueForMissingStub: _i6.Future<_i3.ExecutionList>.value(
-              _FakeExecutionList_4(
+              _FakeExecutionList_6(
                 this,
                 Invocation.method(#listExecutions, [], {
                   #functionId: functionId,
                   #queries: queries,
+                  #total: total,
                 }),
               ),
             ),
@@ -344,7 +556,7 @@ class MockFunctions extends _i1.Mock implements _i5.Functions {
               #scheduledAt: scheduledAt,
             }),
             returnValue: _i6.Future<_i3.Execution>.value(
-              _FakeExecution_5(
+              _FakeExecution_7(
                 this,
                 Invocation.method(#createExecution, [], {
                   #functionId: functionId,
@@ -358,7 +570,7 @@ class MockFunctions extends _i1.Mock implements _i5.Functions {
               ),
             ),
             returnValueForMissingStub: _i6.Future<_i3.Execution>.value(
-              _FakeExecution_5(
+              _FakeExecution_7(
                 this,
                 Invocation.method(#createExecution, [], {
                   #functionId: functionId,
@@ -385,7 +597,7 @@ class MockFunctions extends _i1.Mock implements _i5.Functions {
               #executionId: executionId,
             }),
             returnValue: _i6.Future<_i3.Execution>.value(
-              _FakeExecution_5(
+              _FakeExecution_7(
                 this,
                 Invocation.method(#getExecution, [], {
                   #functionId: functionId,
@@ -394,7 +606,7 @@ class MockFunctions extends _i1.Mock implements _i5.Functions {
               ),
             ),
             returnValueForMissingStub: _i6.Future<_i3.Execution>.value(
-              _FakeExecution_5(
+              _FakeExecution_7(
                 this,
                 Invocation.method(#getExecution, [], {
                   #functionId: functionId,

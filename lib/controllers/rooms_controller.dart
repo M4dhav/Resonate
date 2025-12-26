@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:appwrite/appwrite.dart';
 import 'package:appwrite/models.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Row;
 import 'package:resonate/l10n/app_localizations.dart';
 import 'package:get/get.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
@@ -11,7 +11,9 @@ import 'package:resonate/models/appwrite_room.dart';
 import 'package:resonate/services/appwrite_service.dart';
 import 'package:resonate/services/room_service.dart';
 import 'package:resonate/themes/theme_controller.dart';
+import 'package:resonate/utils/enums/log_type.dart';
 import 'package:resonate/utils/enums/room_state.dart';
+import 'package:resonate/views/widgets/snackbar.dart';
 
 import '../utils/constants.dart';
 import 'auth_state_controller.dart';
@@ -20,9 +22,12 @@ class RoomsController extends GetxController {
   RxBool isLoading = false.obs;
   RxBool isOnActive = false.obs;
   Client client = AppwriteService.getClient();
-  final Databases databases = AppwriteService.getDatabases();
+  final TablesDB tablesDB = AppwriteService.getTables();
   RxList<AppwriteRoom> rooms = <AppwriteRoom>[].obs;
   final ThemeController themeController = Get.find<ThemeController>();
+  RxBool isSearching = false.obs;
+  RxBool searchBarIsEmpty = true.obs;
+  RxList<AppwriteRoom> filteredRooms = <AppwriteRoom>[].obs;
 
   @override
   void onInit() async {
@@ -30,26 +35,26 @@ class RoomsController extends GetxController {
     await getRooms();
   }
 
-  Future<AppwriteRoom> createRoomObject(Document room, String userUid) async {
+  Future<AppwriteRoom> createRoomObject(Row room, String userUid) async {
     // Get three particpant data to use for memberAvatar widget
-    var participantCollectionRef = await databases.listDocuments(
+    var participantCollectionRef = await tablesDB.listRows(
       databaseId: masterDatabaseId,
-      collectionId: participantsCollectionId,
-      queries: [Query.equal("roomId", room.data["\$id"]), Query.limit(3)],
+      tableId: participantsTableId,
+      queries: [Query.equal("roomId", room.$id), Query.limit(3)],
     );
     List<String> memberAvatarUrls = [];
-    for (var p in participantCollectionRef.documents) {
-      Document participantDoc = await databases.getDocument(
+    for (var p in participantCollectionRef.rows) {
+      Row participantDoc = await tablesDB.getRow(
         databaseId: userDatabaseID,
-        collectionId: usersCollectionID,
-        documentId: p.data["uid"],
+        tableId: usersTableID,
+        rowId: p.data["uid"],
       );
       memberAvatarUrls.add(participantDoc.data["profileImageUrl"]);
     }
 
     // Create appwrite room object and add it to rooms list
     AppwriteRoom appwriteRoom = AppwriteRoom(
-      id: room.data['\$id'],
+      id: room.$id,
       name: room.data["name"],
       description: room.data["description"],
       totalParticipants: room.data["totalParticipants"],
@@ -57,6 +62,7 @@ class RoomsController extends GetxController {
       memberAvatarUrls: memberAvatarUrls,
       state: RoomState.live,
       isUserAdmin: room.data["adminUid"] == userUid,
+      reportedUsers: List<String>.from(room.data["reportedUsers"] ?? []),
     );
 
     return appwriteRoom;
@@ -69,14 +75,16 @@ class RoomsController extends GetxController {
 
       // Get active rooms and add it to rooms list
       rooms.value = [];
-      var roomsCollectionRef = await databases.listDocuments(
+      var roomsCollectionRef = await tablesDB.listRows(
         databaseId: masterDatabaseId,
-        collectionId: roomsCollectionId,
+        tableId: roomsTableId,
       );
 
-      for (var room in roomsCollectionRef.documents) {
+      for (var room in roomsCollectionRef.rows) {
         AppwriteRoom appwriteRoom = await createRoomObject(room, userUid);
-        rooms.add(appwriteRoom);
+        if (!appwriteRoom.reportedUsers.contains(userUid)) {
+          rooms.add(appwriteRoom);
+        }
       }
       update();
     } catch (e) {
@@ -88,10 +96,10 @@ class RoomsController extends GetxController {
 
   Future getRoomById(String roomId) async {
     try {
-      Document room = await databases.getDocument(
+      Row room = await tablesDB.getRow(
         databaseId: masterDatabaseId,
-        collectionId: roomsCollectionId,
-        documentId: roomId,
+        tableId: roomsTableId,
+        rowId: roomId,
       );
       String userUid = Get.find<AuthStateController>().uid!;
 
@@ -138,5 +146,37 @@ class RoomsController extends GetxController {
       // Close the loading dialog
       Get.back();
     }
+  }
+
+  Future<void> searchLiveRooms(String query) async {
+    if (query.isEmpty) {
+      filteredRooms.value = rooms;
+      searchBarIsEmpty.value = true;
+      return;
+    }
+    isSearching.value = true;
+    searchBarIsEmpty.value = false;
+    try {
+      final lowerQuery = query.toLowerCase();
+      filteredRooms.value = rooms.where((room) {
+        return room.name.toLowerCase().contains(lowerQuery) ||
+            room.description.toLowerCase().contains(lowerQuery);
+      }).toList();
+    } catch (e) {
+      log('Error searching rooms: $e');
+      filteredRooms.value = rooms;
+      customSnackbar(
+        AppLocalizations.of(Get.context!)!.error,
+        AppLocalizations.of(Get.context!)!.searchFailed,
+        LogType.error,
+      );
+    } finally {
+      isSearching.value = false;
+    }
+  }
+
+  void clearLiveSearch() {
+    filteredRooms.value = rooms;
+    searchBarIsEmpty.value = true;
   }
 }

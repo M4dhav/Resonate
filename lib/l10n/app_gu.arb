@@ -1,0 +1,664 @@
+{
+    
+    "title": "રેઝોનેટ",
+    "roomDescription": "નમ્ર બનો અને અન્ય વ્યક્તિના અભિપ્રાયનો આદર કરો. અસભ્ય ટિપ્પણીઓ ટાળો.",
+    "hidePassword": "પાસવર્ડ છુપાવો",
+    "showPassword": "પાસવર્ડ બતાવો",
+    "passwordEmpty": "પાસવર્ડ ખાલી હોઈ શકે નહીં",
+    "password": "પાસવર્ડ",
+    "confirmPassword": "પાસવર્ડની પુષ્ટિ કરો",
+    "passwordsNotMatch": "પાસવર્ડ મેળ ખાતા નથી",
+    "userCreatedStories": "યુઝર દ્વારા બનાવેલી વાર્તાઓ",
+    "yourStories": "તમારી વાર્તાઓ",
+    "userNoStories": "યુઝરે કોઈ વાર્તા બનાવી નથી",
+    "youNoStories": "તમે કોઈ વાર્તા બનાવી નથી",
+    "follow": "ફોલો કરો",
+    "editProfile": "પ્રોફાઈલ એડિટ કરો",
+    "verifyEmail": "ઈમેઈલ ચકાસો",
+    "verified": "ચકાસાયેલ",
+    "profile": "પ્રોફાઈલ",
+    "userLikedStories": "યુઝરે પસંદ કરેલી વાર્તાઓ",
+    "yourLikedStories": "તમારી પસંદ કરેલી વાર્તાઓ",
+    "userNoLikedStories": "યુઝરે કોઈ વાર્તા પસંદ કરી નથી",
+    "youNoLikedStories": "તમે કોઈ વાર્તા પસંદ કરી નથી",
+    "live": "લાઈવ",
+    "upcoming": "આગામી",
+    "noAvailableRoom": "{isRoom, select, true{કોઈ રૂમ ઉપલબ્ધ નથી} false{કોઈ આગામી રૂમ ઉપલબ્ધ નથી} other{કોઈ રૂમ માહિતી ઉપલબ્ધ નથી}}\nનીચે એક ઉમેરીને શરૂઆત કરો!",
+    "@noAvailableRoom": {
+        "description": "Message when no room or upcoming room is available",
+        "placeholders": {
+            "isRoom": {
+                "type": "String",
+                "example": "true"
+            }
+        }
+    },
+    "user1": "યુઝર 1",
+    "user2": "યુઝર 2",
+    "you": "તમે",
+    "areYouSure": "તમને ખાતરી છે?",
+    "loggingOut": "તમે રેઝોનેટમાંથી લોગ આઉટ કરી રહ્યા છો.",
+    "yes": "હા",
+    "no": "ના",
+    "incorrectEmailOrPassword": "ખોટું ઈમેઈલ અથવા પાસવર્ડ",
+    "passwordShort": "પાસવર્ડ 8 અક્ષરથી ઓછો છે",
+    "tryAgain": "ફરી પ્રયાસ કરો!",
+    "success": "સફળતા",
+    "passwordResetSent": "પાસવર્ડ રીસેટ ઈમેઈલ મોકલાયો!",
+    "error": "ભૂલ",
+    "resetPassword": "પાસવર્ડ રીસેટ કરો",
+    "enterNewPassword": "તમારો નવો પાસવર્ડ દાખલ કરો",
+    "newPassword": "નવો પાસવર્ડ",
+    "setNewPassword": "નવો પાસવર્ડ સેટ કરો",
+    "emailChanged": "ઈમેઈલ બદલાયો",
+    "emailChangeSuccess": "ઈમેઈલ સફળતાપૂર્વક બદલાયો!",
+    "failed": "અસફળ",
+    "emailChangeFailed": "ઈમેઈલ બદલવામાં અસફળ",
+    "oops": "અરે!",
+    "emailExists": "ઈમેઈલ પહેલાથી અસ્તિત્વમાં છે",
+    "changeEmail": "ઈમેઈલ બદલો",
+    "enterValidEmail": "કૃપા કરીને માન્ય ઈમેઈલ એડ્રેસ દાખલ કરો",
+    "newEmail": "નવો ઈમેઈલ",
+    "currentPassword": "હાલનો પાસવર્ડ",
+    "emailChangeInfo": "વધારાની સુરક્ષા માટે, તમારું ઈમેઈલ એડ્રેસ બદલતી વખતે તમારે તમારા એકાઉન્ટનો હાલનો પાસવર્ડ આપવો આવશ્યક છે. ઈમેઈલ બદલ્યા પછી, ભવિષ્યના લોગિન માટે અપડેટ થયેલ ઈમેઈલનો ઉપયોગ કરો.",
+    "oauthUsersMessage": "(ફક્ત તે યુઝર્સ માટે જેઓ ગૂગલ અથવા ગિટહબ વાપરીને લોગ ઇન થયા છે)",
+    "oauthUsersEmailChangeInfo": "તમારો ઈમેઈલ બદલવા માટે, કૃપા કરીને \"હાલનો પાસવર્ડ\" ફીલ્ડમાં નવો પાસવર્ડ દાખલ કરો. આ પાસવર્ડ યાદ રાખવાનું સુનિશ્ચિત કરો, કારણ કે ભવિષ્યમાં ઈમેઈલ બદલવા માટે તમને તેની જરૂર પડશે. આગળ જતા, તમે ગૂગલ/ગિટહબ અથવા તમારા નવા ઈમેઈલ અને પાસવર્ડના સંયોજનનો ઉપયોગ કરીને લોગ ઇન કરી શકો છો.",
+    "resonateTagline": "અમર્યાદિત વાર્તાલાપની\nદુનિયામાં પ્રવેશ કરો.",
+    "signInWithEmail": "ઈમેઈલ સાથે સાઈન ઇન કરો",
+    "or": "અથવા",
+    "continueWith": "સાથે ચાલુ રાખો",
+    "continueWithGoogle": "ગૂગલ સાથે ચાલુ રાખો",
+    "continueWithGitHub": "ગિટહબ સાથે ચાલુ રાખો",
+    "resonateLogo": "રેઝોનેટ લોગો",
+    "iAlreadyHaveAnAccount": "મારી પાસે પહેલાથી એકાઉન્ટ છે",
+    "createNewAccount": "નવો એકાઉન્ટ બનાવો",
+    "userProfile": "યુઝર પ્રોફાઈલ",
+    "passwordIsStrong": "પાસવર્ડ મજબૂત છે",
+    "admin": "એડમિન",
+    "moderator": "મોડરેટર",
+    "speaker": "સ્પીકર",
+    "listener": "સાંભળનાર",
+    "removeModerator": "મોડરેટર દૂર કરો",
+    "kickOut": "બહાર કાઢો",
+    "addModerator": "મોડરેટર ઉમેરો",
+    "addSpeaker": "સ્પીકર ઉમેરો",
+    "makeListener": "સાંભળનાર બનાવો",
+    "pairChat": "જોડી ચેટ",
+    "chooseIdentity": "ઓળખ પસંદ કરો",
+    "selectLanguage": "ભાષા પસંદ કરો",
+    "noConnection": "કોઈ કનેક્શન નથી",
+    "loadingDialog": "ડાયલોગ લોડ થઈ રહ્યો છે",
+    "createAccount": "એકાઉન્ટ બનાવો",
+    "enterValidEmailAddress": "માન્ય ઈમેઈલ એડ્રેસ દાખલ કરો",
+    "email": "ઈમેઈલ",
+    "passwordRequirements": "પાસવર્ડ ઓછામાં ઓછો 8 અક્ષરનો હોવો જોઈએ",
+    "includeNumericDigit": "ઓછામાં ઓછો 1 સંખ્યાત્મક અંક શામેલ કરો",
+    "includeUppercase": "ઓછામાં ઓછો 1 મોટો અક્ષર શામેલ કરો",
+    "includeLowercase": "ઓછામાં ઓછો 1 નાનો અક્ષર શામેલ કરો",
+    "includeSymbol": "ઓછામાં ઓછો 1 પ્રતીક શામેલ કરો",
+    "signedUpSuccessfully": "સફળતાપૂર્વક સાઈન અપ થયું",
+    "newAccountCreated": "તમે સફળતાપૂર્વક નવો એકાઉન્ટ બનાવ્યો છે",
+    "signUp": "સાઈન અપ",
+    "login": "લોગિન",
+    "settings": "સેટિંગ્સ",
+    "accountSettings": "એકાઉન્ટ સેટિંગ્સ",
+    "account": "એકાઉન્ટ",
+    "appSettings": "એપ સેટિંગ્સ",
+    "themes": "થીમ",
+    "about": "વિશે",
+    "other": "અન્ય",
+    "contribute": "યોગદાન આપો",
+    "logOut": "લોગ આઉટ",
+    "participants": "સહભાગીઓ",
+    "delete": "ડિલીટ કરો",
+    "leave": "છોડો",
+    "leaveButton": "છોડો",
+    "findingRandomPartner": "તમારા માટે રેન્ડમ પાર્ટનર શોધી રહ્યા છીએ",
+    "quickFact": "ત્વરિત હકીકત",
+    "cancel": "રદ કરો",
+    "completeYourProfile": "તમારી પ્રોફાઈલ પૂર્ણ કરો",
+    "uploadProfilePicture": "પ્રોફાઈલ પિક્ચર અપલોડ કરો",
+    "enterValidName": "માન્ય નામ દાખલ કરો",
+    "name": "નામ",
+    "username": "યુઝરનેમ",
+    "enterValidDOB": "માન્ય જન્મતારીખ દાખલ કરો",
+    "dateOfBirth": "જન્મતારીખ",
+    "forgotPassword": "પાસવર્ડ ભૂલી ગયા?",
+    "next": "આગળ",
+    "noStoriesExist": "રજૂ કરવા માટે કોઈ વાર્તાઓ અસ્તિત્વમાં નથી",
+    "enterVerificationCode": "તમારો\nવેરિફિકેશન કોડ દાખલ કરો",
+    "verificationCodeSent": "અમે 6-અંકનો વેરિફિકેશન કોડ મોકલ્યો છે\n",
+    "verificationComplete": "વેરિફિકેશન પૂર્ણ",
+    "verificationCompleteMessage": "અભિનંદન તમે તમારું ઈમેઈલ વેરિફાય કર્યું છે",
+    "verificationFailed": "વેરિફિકેશન અસફળ",
+    "otpMismatch": "OTP મેળ ખાતું નથી, કૃપા કરીને ફરી પ્રયાસ કરો",
+    "otpResent": "OTP ફરી મોકલાયો",
+    "requestNewCode": "નવો કોડ મંગાવો",
+    "requestNewCodeIn": "આટલા સમયમાં નવો કોડ મંગાવો",
+    "clickPictureCamera": "કૅમેરા વાપરીને ફોટો લો",
+    "pickImageGallery": "ગૅલેરીમાંથી ઈમેજ પસંદ કરો",
+    "deleteMyAccount": "મારો એકાઉન્ટ ડિલીટ કરો",
+    "createNewRoom": "નવો રૂમ બનાવો",
+    "pleaseEnterScheduledDateTime": "કૃપા કરીને નિર્ધારિત તારીખ-સમય દાખલ કરો",
+    "scheduleDateTimeLabel": "તારીખ સમય શેડ્યૂલ કરો",
+    "enterTags": "ટૅગ્સ દાખલ કરો",
+    "joinCommunity": "કોમ્યુનિટીમાં જોડાવો",
+    "followUsOnX": "X પર અમને ફોલો કરો",
+    "joinDiscordServer": "ડિસ્કોર્ડ સર્વરમાં જોડાવો",
+    "noLyrics": "કોઈ ગીત નથી",
+    "aboutSection": "વિશે",
+    "noStoriesInCategory": "{categoryName} કેટેગરીમાં હાલમાં રજૂ કરવા માટે કોઈ વાર્તાઓ અસ્તિત્વમાં નથી",
+    "@noStoriesInCategory": {
+        "description": "Message when no stories exist in a category",
+        "placeholders": {
+            "categoryName": {
+                "type": "String",
+                "example": "drama"
+            }
+        }
+    },
+    "pushNewChapters": "નવા ચેપ્ટર્સ પુશ કરો",
+    "helpToGrow": "વધવામાં મદદ કરો",
+    "share": "શેર કરો",
+    "rate": "રેટિંગ આપો",
+    "aboutResonate": "રેઝોનેટ વિશે",
+    "description": "વર્ણન",
+    "confirm": "પુષ્ટિ કરો",
+    "classic": "ક્લાસિક",
+    "time": "સમય",
+    "vintage": "વિન્ટેજ",
+    "amber": "એમ્બર",
+    "forest": "ફોરેસ્ટ",
+    "cream": "ક્રીમ",
+    "none": "કંઈ નથી",
+    "checkOutGitHub": "અમારી ગિટહબ રિપોઝિટરી જુઓ: {url}",
+    "@checkOutGitHub": {
+        "description": "Share message for GitHub repository",
+        "placeholders": {
+            "url": {
+                "type": "String",
+                "example": "https://github.com/AOSSIE-Org/Resonate"
+            }
+        }
+    },
+    "aossie": "AOSSIE",
+    "aossieLogo": "aossie લોગો",
+    "errorLoadPackageInfo": "પૅકેજ માહિતી લોડ કરી શકાઈ નથી",
+    "updateAvailable": "અપડેટ ઉપલબ્ધ છે",
+    "newVersionAvailable": "નવું વર્ઝન ઉપલબ્ધ છે!",
+    "upToDate": "અપ ટુ ડેટ",
+    "latestVersion": "તમે લેટેસ્ટ વર્ઝન વાપરી રહ્યા છો",
+    "profileCreatedSuccessfully": "પ્રોફાઈલ સફળતાપૂર્વક બન્યું",
+    "invalidScheduledDateTime": "અમાન્ય શેડ્યૂલ્ડ તારીખ સમય",
+    "scheduledDateTimePast": "શેડ્યૂલ્ડ તારીખ સમય ભૂતકાળમાં હોઈ શકે નહીં",
+    "joinRoom": "રૂમમાં જોડાવો",
+    "loadingDialogName": "ડાયલોગ લોડ થઈ રહ્યો છે",
+    "unknownUser": "અજાણ્યો",
+    "canceled": "રદ કર્યું",
+    "english": "gu",
+    "emailVerificationRequired": "ઈમેઈલ વેરિફિકેશન જરૂરી",
+    "verify": "વેરિફાય કરો",
+    "audioRoom": "ઓડિયો રૂમ",
+    "toRoomAction": "રૂમને {action} કરવા માટે",
+    "@toRoomAction": {
+        "description": "Room action message",
+        "placeholders": {
+            "action": {
+                "type": "String",
+                "example": "delete"
+            }
+        }
+    },
+    "mailSentMessage": "મેઈલ મોકલાયો",
+    "disconnected": "ડિસ્કનેક્ટ થયું",
+    "micOn": "માઈક",
+    "speakerOn": "સ્પીકર",
+    "endChat": "ચેટ સમાપ્ત કરો",
+    "monthJan": "જાન્યુ",
+    "monthFeb": "ફેબ્રુ",
+    "monthMar": "માર્ચ",
+    "monthApr": "એપ્રિલ",
+    "monthMay": "મે",
+    "monthJun": "જૂન",
+    "monthJul": "જુલાઈ",
+    "monthAug": "ઓગ",
+    "monthSep": "સપ્ટે",
+    "monthOct": "ઓક્ટો",
+    "monthNov": "નવે",
+    "monthDec": "ડિસે",
+    "register": "રજિસ્ટર",
+    "newToResonate": "રેઝોનેટ પર નવા છો? ",
+    "alreadyHaveAccount": "પહેલાથી એકાઉન્ટ છે? ",
+    "checking": "તપાસી રહ્યા છીએ...",
+    "forgotPasswordMessage": "તમારો પાસવર્ડ રીસેટ કરવા માટે તમારો રજિસ્ટર્ડ ઈમેઈલ એડ્રેસ દાખલ કરો.",
+    "usernameUnavailable": "યુઝરનેમ ઉપલબ્ધ નથી!",
+    "usernameInvalidOrTaken": "આ યુઝરનેમ અમાન્ય છે અથવા પહેલાથી લેવાયેલ છે.",
+    "otpResentMessage": "કૃપા કરીને નવો OTP માટે તમારો મેઈલ તપાસો.",
+    "connectionError": "કનેક્શન એરર છે. કૃપા કરીને તમારું ઈન્ટરનેટ તપાસો અને ફરી પ્રયાસ કરો.",
+    "seconds": "સેકંડ.",
+    "unsavedChangesWarning": "જો તમે સેવ કર્યા વિના આગળ વધશો, તો કોઈપણ અનસેવ્ડ ફેરફારો ખોવાઈ જશે.",
+    "deleteAccountPermanent": "આ ક્રિયા તમારો એકાઉન્ટ કાયમ માટે ડિલીટ કરશે. આ અપરિવર્તનીય પ્રક્રિયા છે. અમે તમારું યુઝરનેમ, ઈમેઈલ એડ્રેસ અને તમારા એકાઉન્ટ સાથે સંકળાયેલ બધો ડેટા ડિલીટ કરીશું. તમે તેને પુનઃપ્રાપ્ત કરી શકશો નહીં.",
+    "giveGreatName": "એક સરસ નામ આપો..",
+    "joinCommunityDescription": "કોમ્યુનિટીમાં જોડાઈને તમે તમારી શંકાઓ દૂર કરી શકો છો, નવી સુવિધાઓ માટે સૂચન આપી શકો છો, તમને આવેલી સમસ્યાઓની જાણ કરી શકો છો અને વધુ.",
+    "resonateDescription": "રેઝોનેટ એક સોશિયલ મીડિયા પ્લેટફોર્મ છે, જ્યાં દરેક અવાજનું મૂલ્ય છે. અન્યો સાથે તમારા વિચારો, વાર્તાઓ અને અનુભવો શેર કરો. હવે જ તમારી ઓડિયો જર્ની શરૂ કરો. વિવિધ ચર્ચાઓ અને વિષયોમાં ડૂબકી મારો. તમારી સાથે રેઝોનેટ કરતા રૂમ્સ શોધો અને કોમ્યુનિટીનો ભાગ બનો. વાર્તાલાપમાં જોડાવો! રૂમ્સ એક્સપ્લોર કરો, મિત્રો સાથે જોડાવો અને દુનિયા સાથે તમારો અવાજ શેર કરો.",
+    "resonateFullDescription": "રેઝોનેટ એક ક્રાંતિકારી અવાજ-આધારિત સોશિયલ મીડિયા પ્લેટફોર્મ છે જ્યાં દરેક અવાજ મહત્વપૂર્ણ છે. \nરિયલ-ટાઈમ ઓડિયો વાર્તાલાપમાં જોડાવો, વિવિધ ચર્ચાઓમાં ભાગ લો અને \nસમાન વિચારધારા ધરાવતા લોકો સાથે જોડાવો. અમારું પ્લેટફોર્મ આ ઓફર કરે છે:\n- વિષય-આધારિત ચર્ચાઓ સાથે લાઈવ ઓડિયો રૂમ્સ\n- અવાજ દ્વારા સરળ સોશિયલ નેટવર્કિંગ\n- કોમ્યુનિટી-સંચાલિત કન્ટેન્ટ મોડરેશન\n- ક્રોસ-પ્લેટફોર્મ કેમ્પેટિબિલિટી\n- એન્ડ-ટુ-એન્ડ એન્ક્રિપ્ટેડ પ્રાઈવેટ વાર્તાલાપ\n\nAOSSIE ઓપન સોર્સ કોમ્યુનિટી દ્વારા વિકસાવેલ, અમે યુઝર પ્રાઈવસી અને \nકોમ્યુનિટી-સંચાલિત વિકાસને પ્રાથમિકતા આપીએ છીએ. સોશિયલ ઓડિયોના ભવિષ્યને આકાર આપવામાં અમારી સાથે જોડાવો!",
+    "stable": "સ્થિર",
+    "congratulationsEmailVerified": "અભિનંદન તમે તમારું ઈમેઈલ વેરિફાય કર્યું છે",
+    "otpMismatchError": "OTP મેળ ખાતું નથી, કૃપા કરીને ફરી પ્રયાસ કરો",
+    "usernameCharacterLimit": "યુઝરનેમમાં 5 થી વધુ અક્ષરો હોવા જોઈએ.",
+    "submit": "સબમિટ કરો",
+    "anonymous": "અજ્ઞાત",
+    "resonate": "રેઝોનેટ",
+    "noSearchResults": "કોઈ શોધ પરિણામો નથી",
+    "shareRoomMessage": "🚀 આ અદ્ભુત રૂમ જુઓ: {roomName}!\n\n📖 વર્ણન: {description}\n👥 હવે જ {participants} સહભાગીઓ સાથે જોડાવો!",
+    "@shareRoomMessage": {
+        "description": "Message to share room information",
+        "placeholders": {
+            "roomName": {
+                "type": "String",
+                "example": "Discussion Room"
+            },
+            "description": {
+                "type": "String",
+                "example": "A great place to discuss"
+            },
+            "participants": {
+                "type": "int",
+                "example": "5"
+            }
+        }
+    },
+    "participantsCount": "{count} સહભાગીઓ",
+    "@participantsCount": {
+        "description": "Number of participants in a room",
+        "placeholders": {
+            "count": {
+                "type": "int",
+                "example": "5"
+            }
+        }
+    },
+    "join": "જોડાવો",
+    "invalidTags": "અમાન્ય ટૅગ:",
+    "cropImage": "ઈમેજ ક્રોપ કરો",
+    "profileSavedSuccessfully": "પ્રોફાઈલ અપડેટ થયું",
+    "profileUpdatedSuccessfully": "બધા ફેરફારો સફળતાપૂર્વક સેવ થયા.",
+    "profileUpToDate": "પ્રોફાઈલ અપ ટુ ડેટ",
+    "noChangesToSave": "કોઈ નવા ફેરફારો થયા નથી, સેવ કરવા માટે કંઈ નથી.",
+    "connectionFailed": "કનેક્શન નિષ્ફળ",
+    "unableToJoinRoom": "રૂમમાં જોડાવા અસમર્થ. કૃપા કરીને તમારું નેટવર્ક તપાસો અને ફરી પ્રયાસ કરો.",
+    "connectionLost": "કનેક્શન ગુમાવ્યું",
+    "unableToReconnect": "રૂમ સાથે ફરીથી કનેક્ટ કરવા અસમર્થ. કૃપા કરીને ફરીથી જોડાવાનો પ્રયાસ કરો.",
+    "invalidFormat": "અમાન્ય ફોર્મેટ!",
+    "usernameAlphanumeric": "યુઝરનેમ આલ્ફાન્યુમેરિક હોવું જોઈએ અને તેમાં વિશેષ અક્ષરો હોવા જોઈએ નહીં.",
+    "userProfileCreatedSuccessfully": "તમારી યુઝર પ્રોફાઈલ સફળતાપૂર્વક બનાવાઈ છે.",
+    "emailVerificationMessage": "આગળ વધવા માટે, તમારું ઈમેઈલ એડ્રેસ વેરિફાય કરો.",
+    "addNewChaptersToStory": "{storyName} માં નવા ચેપ્ટર્સ ઉમેરો",
+    "@addNewChaptersToStory": {
+        "description": "Title for adding new chapters to a story",
+        "placeholders": {
+            "storyName": {
+                "type": "String",
+                "example": "My Story"
+            }
+        }
+    },
+    "currentChapters": "હાલના ચેપ્ટર્સ",
+    "newChapters": "નવા ચેપ્ટર્સ",
+    "sourceCodeOnGitHub": "ગિટહબ પર સોર્સ કોડ",
+    "createAChapter": "એક ચેપ્ટર બનાવો",
+    "chapterTitle": "ચેપ્ટર ટાઈટલ *",
+    "aboutRequired": "વિશે *",
+    "changeCoverImage": "કવર ઈમેજ બદલો",
+    "uploadAudioFile": "ઓડિયો ફાઈલ અપલોડ કરો",
+    "uploadLyricsFile": "ગીત ફાઈલ અપલોડ કરો",
+    "createChapter": "ચેપ્ટર બનાવો",
+    "audioFileSelected": "ઓડિયો ફાઈલ પસંદ થયેલ: {fileName}",
+    "@audioFileSelected": {
+        "description": "Message when audio file is selected",
+        "placeholders": {
+            "fileName": {
+                "type": "String",
+                "example": "audio.mp3"
+            }
+        }
+    },
+    "lyricsFileSelected": "ગીત ફાઈલ પસંદ થયેલ: {fileName}",
+    "@lyricsFileSelected": {
+        "description": "Message when lyrics file is selected",
+        "placeholders": {
+            "fileName": {
+                "type": "String",
+                "example": "lyrics.txt"
+            }
+        }
+    },
+    "fillAllRequiredFields": "કૃપા કરીને બધા જરૂરી ફીલ્ડ્સ ભરો અને તમારી ઓડિયો ફાઈલ અને ગીત ફાઈલ અપલોડ કરો",
+    "scheduled": "શેડ્યૂલ્ડ",
+    "ok": "ઠીક છે",
+    "roomDescriptionOptional": "રૂમ વર્ણન (વૈકલ્પિક)",
+    "deleteAccount": "એકાઉન્ટ ડિલીટ કરો",
+    "createYourStory": "તમારી વાર્તા બનાવો",
+    "titleRequired": "ટાઈટલ *",
+    "category": "કેટેગરી *",
+    "addChapter": "ચેપ્ટર ઉમેરો",
+    "createStory": "વાર્તા બનાવો",
+    "fillAllRequiredFieldsAndChapter": "કૃપા કરીને બધા જરૂરી ફીલ્ડ્સ ભરો, ઓછામાં ઓછો એક ચેપ્ટર ઉમેરો, અને કવર ઈમેજ પસંદ કરો.",
+    "toConfirmType": "પુષ્ટિ કરવા માટે, ટાઈપ કરો",
+    "inTheBoxBelow": "નીચેના બોક્સમાં",
+    "iUnderstandDeleteMyAccount": "હું સમજું છું, મારો એકાઉન્ટ ડિલીટ કરો",
+    "whatDoYouWantToListenTo": "તમે શું સાંભળવા માગો છો?",
+    "categories": "કેટેગરીઝ",
+    "stories": "વાર્તાઓ",
+    "someSuggestions": "કેટલાક સૂચનો",
+    "getStarted": "શરૂઆત કરો",
+    "skip": "છોડો",
+    "welcomeToResonate": "રેઝોનેટમાં આપનું સ્વાગત છે",
+    "exploreDiverseConversations": "વિવિધ વાર્તાલાપ એક્સપ્લોર કરો",
+    "yourVoiceMatters": "તમારો અવાજ મહત્વનો છે",
+    "joinConversationExploreRooms": "વાર્તાલાપમાં જોડાવો! રૂમ્સ એક્સપ્લોર કરો, મિત્રો સાથે જોડાવો અને દુનિયા સાથે તમારો અવાજ શેર કરો.",
+    "diveIntoDiverseDiscussions": "વિવિધ ચર્ચાઓ અને વિષયોમાં ડૂબકી મારો. \nતમારી સાથે રેઝોનેટ કરતા રૂમ્સ શોધો અને કોમ્યુનિટીનો ભાગ બનો.",
+    "atResonateEveryVoiceValued": "રેઝોનેટમાં, દરેક અવાજનું મૂલ્ય છે. અન્યો સાથે તમારા વિચારો, વાર્તાઓ અને અનુભવો શેર કરો. હવે જ તમારી ઓડિયો જર્ની શરૂ કરો.",
+    "notifications": "નોટિફિકેશન્સ",
+    "taggedYouInUpcomingRoom": "{username} એ તમને આગામી રૂમમાં ટૅગ કર્યા છે: {subject}",
+    "@taggedYouInUpcomingRoom": {
+        "description": "Notification message when tagged in upcoming room",
+        "placeholders": {
+            "username": {
+                "type": "String",
+                "example": "john_doe"
+            },
+            "subject": {
+                "type": "String",
+                "example": "Discussion Room"
+            }
+        }
+    },
+    "taggedYouInRoom": "{username} એ તમને રૂમમાં ટૅગ કર્યા છે: {subject}",
+    "@taggedYouInRoom": {
+        "description": "Notification message when tagged in room",
+        "placeholders": {
+            "username": {
+                "type": "String",
+                "example": "john_doe"
+            },
+            "subject": {
+                "type": "String",
+                "example": "Discussion Room"
+            }
+        }
+    },
+    "likedYourStory": "{username} એ તમારી વાર્તા પસંદ કરી છે: {subject}",
+    "@likedYourStory": {
+        "description": "Notification message when someone likes your story",
+        "placeholders": {
+            "username": {
+                "type": "String",
+                "example": "john_doe"
+            },
+            "subject": {
+                "type": "String",
+                "example": "My Story"
+            }
+        }
+    },
+    "subscribedToYourRoom": "{username} એ તમારા રૂમને સબ્સ્ક્રાઈબ કર્યું છે: {subject}",
+    "@subscribedToYourRoom": {
+        "description": "Notification message when someone subscribes to your room",
+        "placeholders": {
+            "username": {
+                "type": "String",
+                "example": "john_doe"
+            },
+            "subject": {
+                "type": "String",
+                "example": "My Room"
+            }
+        }
+    },
+    "startedFollowingYou": "{username} એ તમને ફોલો કરવાની શરૂઆત કરી છે",
+    "@startedFollowingYou": {
+        "description": "Notification message when someone starts following you",
+        "placeholders": {
+            "username": {
+                "type": "String",
+                "example": "john_doe"
+            }
+        }
+    },
+    "youHaveNewNotification": "તમારી પાસે નવું નોટિફિકેશન છે",
+    "hangOnGoodThingsTakeTime": "રાહ જુઓ, સારી વસ્તુઓ માટે સમય લાગે છે 🔍",
+    "resonateOpenSourceProject": "રેઝોનેટ એ AOSSIE દ્વારા જાળવવામાં આવતો ઓપન સોર્સ પ્રોજેક્ટ છે. યોગદાન આપવા માટે અમારો ગિટહબ જુઓ.",
+    "mute": "મ્યૂટ કરો",
+    "speakerLabel": "સ્પીકર",
+    "end": "સમાપ્ત",
+    "saveChanges": "ફેરફારો સેવ કરો",
+    "discard": "રદ કરો",
+    "save": "સેવ કરો",
+    "changeProfilePicture": "પ્રોફાઈલ પિક્ચર બદલો",
+    "camera": "કૅમેરા",
+    "gallery": "ગૅલેરી",
+    "remove": "દૂર કરો",
+    "created": "બનાવ્યું {date}",
+    "@created": {
+        "description": "Story creation date",
+        "placeholders": {
+            "date": {
+                "type": "String",
+                "example": "Jan 15, 2023"
+            }
+        }
+    },
+    "aboutStory": "વિશે",
+    "chapters": "ચેપ્ટર્સ",
+    "deleteStory": "વાર્તા ડિલીટ કરો",
+    "createdBy": "{creatorName} દ્વારા બનાવેલ",
+    "@createdBy": {
+        "description": "Story creator information",
+        "placeholders": {
+            "creatorName": {
+                "type": "String",
+                "example": "John Doe"
+            }
+        }
+    },
+    "start": "શરૂ કરો",
+    "unsubscribe": "અનસબ્સ્ક્રાઈબ કરો",
+    "subscribe": "સબ્સ્ક્રાઈબ કરો",
+    "storyCategory": "{category, select, drama{ડ્રામા} comedy{કોમેડી} horror{હોરર} romance{રોમાન્સ} thriller{થ્રિલર} spiritual{આધ્યાત્મિક} other{અન્ય}}",
+    "@storyCategory": {
+        "description": "Choose the category for Story",
+        "placeholders": {
+            "category": {
+                "type": "String",
+                "example": "drama"
+            }
+        }
+    },
+    "chooseTheme": "{category, select, classicTheme{ક્લાસિક} timeTheme{સમય} vintageTheme{વિન્ટેજ} amberTheme{એમ્બર} forestTheme{ફોરેસ્ટ} creamTheme{ક્રીમ} other{અન્ય}}",
+    "@chooseTheme": {
+        "description": "Choose the theme for the app",
+        "placeholders": {
+            "category": {
+                "type": "String",
+                "example": "classic"
+            }
+        }
+    },
+    "minutesAgo": "{count, plural, =1{1 મિનિટ પહેલા} other{{count} મિનિટ પહેલા}}",
+    "@minutesAgo": {
+        "description": "Time format for minutes ago",
+        "placeholders": {
+            "count": {
+                "type": "int",
+                "example": "5"
+            }
+        }
+    },
+    "hoursAgo": "{count, plural, =1{1 કલાક પહેલા} other{{count} કલાક પહેલા}}",
+    "@hoursAgo": {
+        "description": "Time format for hours ago",
+        "placeholders": {
+            "count": {
+                "type": "int",
+                "example": "2"
+            }
+        }
+    },
+    "daysAgo": "{count, plural, =1{1 દિવસ પહેલા} other{{count} દિવસ પહેલા}}",
+    "@daysAgo": {
+        "description": "Time format for days ago",
+        "placeholders": {
+            "count": {
+                "type": "int",
+                "example": "3"
+            }
+        }
+    },
+    "by": "દ્વારા",
+    "likes": "લાઈક્સ",
+    "lengthMinutes": "મિનિટ",
+    "requiredField": "જરૂરી ફીલ્ડ",
+    "clickPictureUsingCamera": "કૅમેરા વાપરીને ફોટો લો",
+    "pickImageFromGallery": "ગૅલેરીમાંથી ઈમેજ પસંદ કરો",
+    "onlineUsers": "ઓનલાઈન યુઝર્સ",
+    "noOnlineUsers": "કોઈ યુઝર્સ હાલમાં ઓનલાઈન નથી",
+    "chooseUser": "ચેટ કરવા માટે યુઝર પસંદ કરો",
+    "quickMatch": "ક્વિક મેચ",
+    "story": "વાર્તા",
+    "user": "યુઝર",
+    "following": "ફોલોઈંગ",
+    "followers": "ફોલોવર્સ",
+    "checkForUpdates": "અપડેટ્સ તપાસો",
+    "updateNow": "હવે અપડેટ કરો",
+    "updateLater": "પછીથી",
+    "updateSuccessful": "અપડેટ સફળ",
+    "updateSuccessfulMessage": "રેઝોનેટ સફળતાપૂર્વક અપડેટ થયું!",
+    "updateCancelled": "અપડેટ રદ કર્યું",
+    "updateCancelledMessage": "યુઝર દ્વારા અપડેટ રદ કરવામાં આવ્યું",
+    "updateFailed": "અપડેટ નિષ્ફળ",
+    "updateFailedMessage": "અપડેટ કરવામાં નિષ્ફળ. કૃપા કરીને પ્લે સ્ટોરમાંથી મેન્યુઅલી અપડેટ કરવાનો પ્રયાસ કરો.",
+    "updateError": "અપડેટ એરર",
+    "updateErrorMessage": "અપડેટ કરતી વખતે એરર આવ્યો. કૃપા કરીને ફરી પ્રયાસ કરો.",
+    "platformNotSupported": "પ્લેટફોર્મ સપોર્ટેડ નથી",
+    "platformNotSupportedMessage": "અપડેટ તપાસવું ફક્ત એન્ડ્રોઇડ ડિવાઇસેસ પર જ ઉપલબ્ધ છે",
+    "updateCheckFailed": "અપડેટ તપાસ નિષ્ફળ",
+    "updateCheckFailedMessage": "અપડેટ્સ માટે તપાસ કરી શકાયું નથી. કૃપા કરીને પછીથી પ્રયાસ કરો.",
+    "upToDateTitle": "તમે અપ ટુ ડેટ છો!",
+    "upToDateMessage": "તમે રેઝોનેટનું લેટેસ્ટ વર્ઝન વાપરી રહ્યા છો",
+    "updateAvailableTitle": "અપડેટ ઉપલબ્ધ છે!",
+    "updateAvailableMessage": "પ્લે સ્ટોર પર રેઝોનેટનું નવું વર્ઝન ઉપલબ્ધ છે",
+    "updateFeaturesImprovement": "લેટેસ્ટ ફીચર્સ અને સુધારાઓ મેળવો!",
+    "friendRequests": "મિત્ર વિનંતીઓ",
+    "friendRequestSent": "મિત્ર વિનંતી મોકલાઈ",
+    "friendRequestSentTo": "{username} ને તમારી મિત્ર વિનંતી મોકલાઈ છે.",
+    "@friendRequestSentTo": {
+        "description": "Message when a friend request is sent to a user",
+        "placeholders": {
+            "username": {
+                "type": "String",
+                "example": "john_doe"
+            }
+        }
+    },
+    "friendRequestCancelled": "મિત્ર વિનંતી રદ કરાઈ",
+    "friendRequestCancelledTo": "{username} ને તમારી મિત્ર વિનંતી રદ કરાઈ છે.",
+    "@friendRequestCancelledTo": {
+        "description": "Message when a friend request is cancelled",
+        "placeholders": {
+            "username": {
+                "type": "String",
+                "example": "john_doe"
+            }
+        }
+    },
+    "requested": "વિનંતી કરેલ",
+    "friends": "મિત્રો",
+    "addFriend": "મિત્ર ઉમેરો",
+    "friendRequestAccepted": "મિત્ર વિનંતી સ્વીકારી",
+    "friendRequestAcceptedTo": "તમે હવે ${username} સાથે મિત્ર છો.",
+    "@friendRequestAcceptedTo": {
+        "description": "Message when a friend request is accepted",
+        "placeholders": {
+            "username": {
+                "type": "String",
+                "example": "john_doe"
+            }
+        }
+    },
+    "friendRequestDeclined": "મિત્ર વિનંતી નકારી",
+    "friendRequestDeclinedTo": "તમે ${username} ની મિત્ર વિનંતી નકારી છે.",
+    "@friendRequestDeclinedTo": {
+        "description": "Message when a friend request is declined",
+        "placeholders": {
+            "username": {
+                "type": "String",
+                "example": "john_doe"
+            }
+        }
+    },
+    "accept": "સ્વીકારો",
+    "callDeclined": "કૉલ નકારી",
+    "callDeclinedTo": "યુઝર ${username} એ કૉલ નકારી છે.",
+    "@callDeclinedTo": {
+        "description": "Message when a call is declined",
+        "placeholders": {
+            "username": {
+                "type": "String",
+                "example": "john_doe"
+            }
+        }
+    },
+"checkForUpdates": "અપડેટ્સ તપાસો",
+"updateNow": "હમણાં અપડેટ કરો",
+"updateLater": "પછી",
+"updateSuccessful": "અપડેટ સફળ થયું",
+"updateSuccessfulMessage": "Resonate સફળતાપૂર્વક અપડેટ થયું છે!",
+"updateCancelled": "અપડેટ રદ કર્યું",
+"updateCancelledMessage": "વપરાશકર્તાએ અપડેટ રદ કર્યું",
+"updateFailed": "અપડેટ નિષ્ફળ થયું",
+"updateFailedMessage": "અપડેટ કરવામાં નિષ્ફળતા. કૃપા કરીને Play Storeમાંથી મેન્યુઅલી અપડેટ કરવાનો પ્રયાસ કરો.",
+"updateError": "અપડેટ ભૂલ",
+"updateErrorMessage": "અપડેટ કરતી વખતે ભૂલ આવી. કૃપા કરીને ફરી પ્રયાસ કરો.",
+"platformNotSupported": "પ્લેટફોર્મ સપોર્ટેડ નથી",
+"platformNotSupportedMessage": "અપડેટ તપાસ ફક્ત Android ઉપકરણો પર જ ઉપલબ્ધ છે",
+"updateCheckFailed": "અપડેટ તપાસ નિષ્ફળ",
+"updateCheckFailedMessage": "અપડેટ તપાસી શક્યા નથી. કૃપા કરીને પછીથી પ્રયાસ કરો.",
+"upToDateTitle": "તમે અપ ટુ ડેટ છો!",
+"upToDateMessage": "તમે Resonate નું નવું વર્ઝન ઉપયોગ કરી રહ્યા છો",
+"updateAvailableTitle": "અપડેટ ઉપલબ્ધ છે!",
+"updateAvailableMessage": "Resonate નું નવું વર્ઝન Play Store પર ઉપલબ્ધ છે",
+"updateFeaturesImprovement": "નવા ફીચર્સ અને સુધારાઓ મેળવો!",
+  "alert": "ચેતવણી",
+  "removedFromRoom": "તમને રૂમમાંથી દૂર કરવામાં આવ્યા છે અથવા રિપોર્ટ કરવામાં આવ્યા છે.",
+"reportType": "{type, select, harassment{સતાવણી / દ્વેષપૂર્ણ ભાષણ} abuse{અપમાનજનક સામગ્રી / હિંસા} spam{સ્પામ / છેતરપિંડી / ફ્રોડ} impersonation{ઢોંગ / નકલી એકાઉન્ટ્સ} illegal{ગેરકાયદેસર પ્રવૃત્તિઓ} selfharm{સ્વ-નુકસાન / આત્મહત્યા / માનસિક સ્વાસ્થ્ય} misuse{પ્લેટફોર્મનો દુરુપયોગ} other{અન્ય}}",
+"@reportType": {
+    "description": "Report type selection for reporting users",
+    "placeholders": {
+        "type": {
+            "type": "String",
+            "example": "harassment"
+        }
+    }
+},
+  "userBlockedFromResonate": "તમે અન્ય વપરાશકર્તાઓ પાસેથી અનેક રિપોર્ટ્સ પ્રાપ્ત કર્યા છે અને તમને Resonate નો ઉપયોગ કરવા માટે અવરોધિત કરવામાં આવ્યા છે. જો તમને લાગે કે આ ભૂલ છે તો કૃપા કરીને AOSSIE નો સંપર્ક કરો.",
+  "reportParticipant": "ભાગીદારને રિપોર્ટ કરો",
+  "selectReportType": "કૃપા કરીને રિપોર્ટ પ્રકાર પસંદ કરો",
+  "reportSubmitted": "રિપોર્ટ સફળતાપૂર્વક સબમિટ થયો",
+  "reportFailed": "રિપોર્ટ સબમિટ કરવામાં નિષ્ફળ ગયું",
+  "additionalDetailsOptional": "વધારાની વિગતો (વૈકલ્પિક)",
+  "submitReport": "રિપોર્ટ સબમિટ કરો",
+  "actionBlocked": "ક્રિયા અવરોધિત",
+  "cannotStopRecording": "તમે હસ્તચાલિત રીતે રેકોર્ડિંગ બંધ કરી શકતા નથી, રૂમ બંધ થશે ત્યારે રેકોર્ડિંગ આપમેળે બંધ થશે.",
+  "liveChapter": "લાઈવ અધ્યાય",
+  "viewOrEditLyrics": "ગીત જુઓ અથવા સંપાદિત કરો",
+  "close": "બંધ કરો",
+  "verifyChapterDetails": "અધ્યાયની વિગતો ચકાસો",
+  "author": "લેખક",
+  "startLiveChapter": "લાઈવ અધ્યાય શરૂ કરો",
+  "fillAllFields": "કૃપા કરીને તમામ જરૂરી ક્ષેત્રો ભરો",
+  "noRecordingError": "તમે અધ્યાય માટે કઈ પણ રેકોર્ડિંગ નથી કર્યું. રૂમમાંથી બહાર નીકળતા પહેલાં કૃપા કરીને અધ્યાય રેકોર્ડ કરો.",
+  "deleteMessageTitle": "સંદેશ કાઢી નાખો",
+  "deleteMessageContent": "શું તમે ખરેખર આ સંદેશ કાઢી નાખવા માંગો છો?"
+}
+

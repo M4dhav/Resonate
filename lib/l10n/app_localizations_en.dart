@@ -318,6 +318,59 @@ class AppLocalizationsEn extends AppLocalizations {
   String get contribute => 'Contribute';
 
   @override
+  String get appPreferences => 'App Preferences';
+
+  @override
+  String get transcriptionModel => 'Transcription Model';
+
+  @override
+  String get transcriptionModelDescription =>
+      'Choose the AI model for voice transcription. Larger models are more accurate but slower and require more storage.';
+
+  @override
+  String get whisperModelTiny => 'Tiny';
+
+  @override
+  String get whisperModelTinyDescription => 'Fastest, least accurate (~39 MB)';
+
+  @override
+  String get whisperModelBase => 'Base';
+
+  @override
+  String get whisperModelBaseDescription =>
+      'Balanced speed and accuracy (~74 MB)';
+
+  @override
+  String get whisperModelSmall => 'Small';
+
+  @override
+  String get whisperModelSmallDescription => 'Good accuracy, slower (~244 MB)';
+
+  @override
+  String get whisperModelMedium => 'Medium';
+
+  @override
+  String get whisperModelMediumDescription => 'High accuracy, slower (~769 MB)';
+
+  @override
+  String get whisperModelLargeV1 => 'Large V1';
+
+  @override
+  String get whisperModelLargeV1Description =>
+      'Most accurate, slowest (~1.55 GB)';
+
+  @override
+  String get whisperModelLargeV2 => 'Large V2';
+
+  @override
+  String get whisperModelLargeV2Description =>
+      'Improved large model with higher accuracy (~1.55 GB)';
+
+  @override
+  String get modelDownloadInfo =>
+      'Models are downloaded when first used. We recommend using Base, Small, or Medium. Large models require very high-end devices.';
+
+  @override
   String get logOut => 'Log out';
 
   @override
@@ -340,6 +393,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get cancel => 'Cancel';
+
+  @override
+  String get hide => 'Remove';
+
+  @override
+  String get removeRoom => 'Remove Room';
+
+  @override
+  String get removeRoomFromList => 'Remove from list';
+
+  @override
+  String get removeRoomConfirmation =>
+      'Are you sure you want to remove this upcoming room from your list?';
 
   @override
   String get completeYourProfile => 'Complete your Profile';
@@ -433,15 +499,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get noLyrics => 'No lyrics';
 
   @override
-  String get aboutSection => 'About';
-
-  @override
   String noStoriesInCategory(String categoryName) {
     return 'No stories currently exist in the $categoryName category to present';
   }
 
   @override
-  String get pushNewChapters => 'Push New Chapters';
+  String get newChapters => 'New Chapters';
 
   @override
   String get helpToGrow => 'Help to grow';
@@ -497,6 +560,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get errorLoadPackageInfo => 'Could not load package info';
 
   @override
+  String get searchFailed => 'Failed to search rooms. Please try again.';
+
+  @override
   String get updateAvailable => 'Update Available';
 
   @override
@@ -519,9 +585,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get joinRoom => 'Join Room';
-
-  @override
-  String get loadingDialogName => 'Loading Dialog';
 
   @override
   String get unknownUser => 'Unknown';
@@ -657,13 +720,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stable => 'Stable';
 
   @override
-  String get congratulationsEmailVerified =>
-      'Congratulations you have verified your Email';
-
-  @override
-  String get otpMismatchError => 'OTP mismatch occurred please try again';
-
-  @override
   String get usernameCharacterLimit =>
       'Username should contain more than 5 characters.';
 
@@ -674,10 +730,32 @@ class AppLocalizationsEn extends AppLocalizations {
   String get anonymous => 'Anonymous';
 
   @override
-  String get resonate => 'Resonate';
+  String get noSearchResults => 'No Search Results';
 
   @override
-  String get noSearchResults => 'No Search Results';
+  String get searchRooms => 'Search rooms...';
+
+  @override
+  String get searchingRooms => 'Searching rooms...';
+
+  @override
+  String get clearSearch => 'Clear search';
+
+  @override
+  String get searchError => 'Search Error';
+
+  @override
+  String get searchRoomsError => 'Failed to search rooms. Please try again.';
+
+  @override
+  String get searchUpcomingRoomsError =>
+      'Failed to search upcoming rooms. Please try again.';
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get clear => 'Clear';
 
   @override
   String shareRoomMessage(
@@ -752,9 +830,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get currentChapters => 'Current Chapters';
-
-  @override
-  String get newChapters => 'New Chapters';
 
   @override
   String get sourceCodeOnGitHub => 'Source code on GitHub';
@@ -947,9 +1022,6 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get aboutStory => 'About';
-
-  @override
   String get chapters => 'Chapters';
 
   @override
@@ -1043,12 +1115,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get requiredField => 'Required field';
 
   @override
-  String get clickPictureUsingCamera => 'Click picture using camera';
-
-  @override
-  String get pickImageFromGallery => 'Pick image from gallery';
-
-  @override
   String get onlineUsers => 'Online Users';
 
   @override
@@ -1071,73 +1137,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get followers => 'Followers';
-
-  @override
-  String get checkForUpdates => 'Check Updates';
-
-  @override
-  String get updateNow => 'Update Now';
-
-  @override
-  String get updateLater => 'Later';
-
-  @override
-  String get updateSuccessful => 'Update Successful';
-
-  @override
-  String get updateSuccessfulMessage =>
-      'Resonate has been updated successfully!';
-
-  @override
-  String get updateCancelled => 'Update Cancelled';
-
-  @override
-  String get updateCancelledMessage => 'Update was cancelled by user';
-
-  @override
-  String get updateFailed => 'Update Failed';
-
-  @override
-  String get updateFailedMessage =>
-      'Failed to update. Please try updating from Play Store manually.';
-
-  @override
-  String get updateError => 'Update Error';
-
-  @override
-  String get updateErrorMessage =>
-      'An error occurred while updating. Please try again.';
-
-  @override
-  String get platformNotSupported => 'Platform Not Supported';
-
-  @override
-  String get platformNotSupportedMessage =>
-      'Update checking is only available on Android devices';
-
-  @override
-  String get updateCheckFailed => 'Update Check Failed';
-
-  @override
-  String get updateCheckFailedMessage =>
-      'Could not check for updates. Please try again later.';
-
-  @override
-  String get upToDateTitle => 'You\'re Up to Date!';
-
-  @override
-  String get upToDateMessage => 'You\'re using the latest version of Resonate';
-
-  @override
-  String get updateAvailableTitle => 'Update Available!';
-
-  @override
-  String get updateAvailableMessage =>
-      'A new version of Resonate is available on Play Store';
-
-  @override
-  String get updateFeaturesImprovement =>
-      'Get the latest features and improvements!';
 
   @override
   String get friendRequests => 'Friend Requests';
@@ -1172,7 +1171,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String friendRequestAcceptedTo(String username) {
-    return 'You are now friends with \$$username.';
+    return 'You are now friends with $username.';
   }
 
   @override
@@ -1180,7 +1179,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String friendRequestDeclinedTo(String username) {
-    return 'You have declined the friend request from \$$username.';
+    return 'You have declined the friend request from $username.';
   }
 
   @override
@@ -1191,7 +1190,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String callDeclinedTo(String username) {
-    return 'User \$$username declined the call.';
+    return 'User $username declined the call.';
   }
 
   @override
@@ -1260,4 +1259,100 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get updateFeaturesImprovement =>
       'Get the latest features and improvements!';
+
+  @override
+  String get failedToRemoveRoom => 'Failed to remove room';
+
+  @override
+  String get roomRemovedSuccessfully =>
+      'Room removed from your list successfully';
+
+  @override
+  String get alert => 'Alert';
+
+  @override
+  String get removedFromRoom =>
+      'You have been reported or removed from the room';
+
+  @override
+  String reportType(String type) {
+    String _temp0 = intl.Intl.selectLogic(type, {
+      'harassment': 'Harassment / Hate Speech',
+      'abuse': 'Abusive content / Violence',
+      'spam': 'Spam / Scams / Fraud',
+      'impersonation': 'Impersonation / Fake Accounts',
+      'illegal': 'Illegal Activities',
+      'selfharm': 'Self-harm / Suicide / Mental health',
+      'misuse': 'Misuse of platform',
+      'other': 'Other',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String get userBlockedFromResonate =>
+      'You have received multiple reports from users and you have been blocked from using Resonate. Please contact AOSSIE if you believe this is a mistake.';
+
+  @override
+  String get reportParticipant => 'Report Participant';
+
+  @override
+  String get selectReportType => 'Please select a report type';
+
+  @override
+  String get reportSubmitted => 'Report Submitted Successfully';
+
+  @override
+  String get reportFailed => 'Report Submission Failed';
+
+  @override
+  String get additionalDetailsOptional => 'Additional details (optional)';
+
+  @override
+  String get submitReport => 'Submit Report';
+
+  @override
+  String get actionBlocked => 'Action Blocked';
+
+  @override
+  String get cannotStopRecording =>
+      'You cannot stop the recording manually, the recording will be stopped when the room is closed.';
+
+  @override
+  String get liveChapter => 'Live Chapter';
+
+  @override
+  String get viewOrEditLyrics => 'View or Edit Lyrics';
+
+  @override
+  String get close => 'Close';
+
+  @override
+  String get verifyChapterDetails => 'Verify Chapter Details';
+
+  @override
+  String get author => 'Author';
+
+  @override
+  String get startLiveChapter => 'Start a Live Chapter';
+
+  @override
+  String get fillAllFields => 'Please fill in all required fields';
+
+  @override
+  String get noRecordingError =>
+      'You have not recorded anything for the chapter. Please record a chapter before exiting the room';
+
+  @override
+  String get deleteMessageTitle => 'Delete Message';
+
+  @override
+  String get deleteMessageContent =>
+      'Are you sure you want to delete this message?';
+
+  @override
+  String get thisMessageWasDeleted => 'This message was deleted';
+
+  @override
+  String get failedToDeleteMessage => 'Failed to delete message';
 }

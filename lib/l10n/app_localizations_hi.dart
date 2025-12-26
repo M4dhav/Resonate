@@ -317,6 +317,58 @@ class AppLocalizationsHi extends AppLocalizations {
   String get contribute => 'योगदान करें';
 
   @override
+  String get appPreferences => 'ऐप प्राथमिकताएं';
+
+  @override
+  String get transcriptionModel => 'ट्रांसक्रिप्शन मॉडल';
+
+  @override
+  String get transcriptionModelDescription =>
+      'वॉयस ट्रांसक्रिप्शन के लिए AI मॉडल चुनें। बड़े मॉडल अधिक सटीक हैं लेकिन धीमे हैं और अधिक स्टोरेज की आवश्यकता होती है।';
+
+  @override
+  String get whisperModelTiny => 'टाइनी';
+
+  @override
+  String get whisperModelTinyDescription => 'सबसे तेज़, कम सटीक (~39 MB)';
+
+  @override
+  String get whisperModelBase => 'बेस';
+
+  @override
+  String get whisperModelBaseDescription => 'संतुलित गति और सटीकता (~74 MB)';
+
+  @override
+  String get whisperModelSmall => 'स्मॉल';
+
+  @override
+  String get whisperModelSmallDescription => 'अच्छी सटीकता, धीमा (~244 MB)';
+
+  @override
+  String get whisperModelMedium => 'मीडियम';
+
+  @override
+  String get whisperModelMediumDescription => 'उच्च सटीकता, धीमा (~769 MB)';
+
+  @override
+  String get whisperModelLargeV1 => 'लार्ज V1';
+
+  @override
+  String get whisperModelLargeV1Description =>
+      'सबसे अधिक सटीक, सबसे धीमा (~1.55 GB)';
+
+  @override
+  String get whisperModelLargeV2 => 'लार्ज V2';
+
+  @override
+  String get whisperModelLargeV2Description =>
+      'उच्च सटीकता के साथ बेहतर बड़ा मॉडल (~1.55 GB)';
+
+  @override
+  String get modelDownloadInfo =>
+      'मॉडल पहली बार उपयोग करने पर डाउनलोड हो जाते हैं। हम बेस, स्मॉल या मीडियम का उपयोग करने की सिफारिश करते हैं। बड़े मॉडल के लिए बहुत उच्च अंत उपकरणों की आवश्यकता होती है।';
+
+  @override
   String get logOut => 'लॉग आउट';
 
   @override
@@ -339,6 +391,19 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get cancel => 'कैंसल';
+
+  @override
+  String get hide => 'छुपाएं';
+
+  @override
+  String get removeRoom => 'रूम छुपाएं';
+
+  @override
+  String get removeRoomFromList => 'सूची से छुपाएं';
+
+  @override
+  String get removeRoomConfirmation =>
+      'क्या आप वाकई इस आने वाले रूम को अपनी सूची से छुपाना चाहते हैं?';
 
   @override
   String get completeYourProfile => 'अपनी प्रोफ़ाइल पूरी करो';
@@ -433,15 +498,12 @@ class AppLocalizationsHi extends AppLocalizations {
   String get noLyrics => 'कोई लिरिक्स उपलब्ध नहीं';
 
   @override
-  String get aboutSection => 'चैप्टर के बारे में';
-
-  @override
   String noStoriesInCategory(String categoryName) {
     return '$categoryName श्रेणी में कोई कहानी नहीं है';
   }
 
   @override
-  String get pushNewChapters => 'नए चैप्टर्स जोड़ें';
+  String get newChapters => 'नए चैप्टर्स जोड़ें';
 
   @override
   String get helpToGrow => 'साथ मिलकर बढ़ाएं';
@@ -497,6 +559,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get errorLoadPackageInfo => 'पैकेज जानकारी लोड नहीं हो सकी';
 
   @override
+  String get searchFailed => 'रूम खोजने में विफल। कृपया पुनः प्रयास करें।';
+
+  @override
   String get updateAvailable => 'अपडेट उपलब्ध है';
 
   @override
@@ -521,9 +586,6 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get joinRoom => 'रूम में शामिल हों';
-
-  @override
-  String get loadingDialogName => 'लोडिंग डायलॉग';
 
   @override
   String get unknownUser => 'अज्ञात यूज़र';
@@ -659,14 +721,6 @@ class AppLocalizationsHi extends AppLocalizations {
   String get stable => 'स्थिर';
 
   @override
-  String get congratulationsEmailVerified =>
-      'बधाई हो! आपका ईमेल वेरिफाई हो गया है';
-
-  @override
-  String get otpMismatchError =>
-      'OTP मेल नहीं खा रहा, कृपया फिर से प्रयास करें';
-
-  @override
   String get usernameCharacterLimit =>
       'यूज़रनेम में कम से कम 6 अक्षर होने चाहिए।';
 
@@ -677,10 +731,33 @@ class AppLocalizationsHi extends AppLocalizations {
   String get anonymous => 'गुमनाम';
 
   @override
-  String get resonate => 'रेज़ोनेट';
+  String get noSearchResults => 'कोई रिज़ल्ट नहीं मिला';
 
   @override
-  String get noSearchResults => 'कोई रिज़ल्ट नहीं मिला';
+  String get searchRooms => 'रूम खोजें...';
+
+  @override
+  String get searchingRooms => 'रूम खोजे जा रहे हैं...';
+
+  @override
+  String get clearSearch => 'खोज साफ़ करें';
+
+  @override
+  String get searchError => 'खोज त्रुटि';
+
+  @override
+  String get searchRoomsError =>
+      'कमरों की खोज असफल हुई। कृपया दोबारा कोशिश करें।';
+
+  @override
+  String get searchUpcomingRoomsError =>
+      'आगामी कमरों की खोज असफल हुई। कृपया दोबारा कोशिश करें।';
+
+  @override
+  String get search => 'खोजें';
+
+  @override
+  String get clear => 'साफ़ करें';
 
   @override
   String shareRoomMessage(
@@ -755,9 +832,6 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get currentChapters => 'मौजूदा चैप्टर्स';
-
-  @override
-  String get newChapters => 'नए चैप्टर्स';
 
   @override
   String get sourceCodeOnGitHub => 'GitHub पर सोर्स कोड';
@@ -952,9 +1026,6 @@ class AppLocalizationsHi extends AppLocalizations {
   }
 
   @override
-  String get aboutStory => 'कहानी के बारे में';
-
-  @override
   String get chapters => 'चैप्टर';
 
   @override
@@ -1048,12 +1119,6 @@ class AppLocalizationsHi extends AppLocalizations {
   String get requiredField => 'आवश्यक फील्ड';
 
   @override
-  String get clickPictureUsingCamera => 'कैमरा से फोटो लें';
-
-  @override
-  String get pickImageFromGallery => 'गैलरी से फोटो चुनें';
-
-  @override
   String get onlineUsers => 'ऑनलाइन यूज़र्स';
 
   @override
@@ -1076,73 +1141,6 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get followers => 'फॉलोअर्स';
-
-  @override
-  String get checkForUpdates => 'अपडेट चेक करें';
-
-  @override
-  String get updateNow => 'अभी अपडेट करें';
-
-  @override
-  String get updateLater => 'बाद में';
-
-  @override
-  String get updateSuccessful => 'अपडेट सफल';
-
-  @override
-  String get updateSuccessfulMessage => 'रेज़ोनेट सफलतापूर्वक अपडेट हो गया है!';
-
-  @override
-  String get updateCancelled => 'अपडेट रद्द किया गया';
-
-  @override
-  String get updateCancelledMessage => 'अपडेट यूज़र द्वारा रद्द किया गया';
-
-  @override
-  String get updateFailed => 'अपडेट फेल';
-
-  @override
-  String get updateFailedMessage =>
-      'अपडेट फेल हो गया। कृपया Play Store से मैन्युअली अपडेट करने का प्रयास करें।';
-
-  @override
-  String get updateError => 'अपडेट एरर';
-
-  @override
-  String get updateErrorMessage =>
-      'अपडेट करने में कोई समस्या आई। कृपया फिर से प्रयास करें।';
-
-  @override
-  String get platformNotSupported => 'प्लेटफॉर्म सपोर्टेड नहीं';
-
-  @override
-  String get platformNotSupportedMessage =>
-      'अपडेट चेक करना केवल Android डिवाइस पर उपलब्ध है';
-
-  @override
-  String get updateCheckFailed => 'अपडेट चेक फेल';
-
-  @override
-  String get updateCheckFailedMessage =>
-      'अपडेट चेक नहीं हो सका। कृपया बाद में प्रयास करें।';
-
-  @override
-  String get upToDateTitle => 'आप अप टू डेट हैं!';
-
-  @override
-  String get upToDateMessage =>
-      'आप रेज़ोनेट का लेटेस्ट वर्शन इस्तेमाल कर रहे हैं';
-
-  @override
-  String get updateAvailableTitle => 'अपडेट उपलब्ध है!';
-
-  @override
-  String get updateAvailableMessage =>
-      'रेज़ोनेट का नया वर्शन Play Store पर उपलब्ध है';
-
-  @override
-  String get updateFeaturesImprovement =>
-      'नवीनतम सुविधाएं और सुधार प्राप्त करें!';
 
   @override
   String get friendRequests => 'फ्रेंड रिक्वेस्ट';
@@ -1265,4 +1263,100 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get updateFeaturesImprovement =>
       'नवीनतम सुविधाएं और सुधार प्राप्त करें!';
+
+  @override
+  String get failedToRemoveRoom => 'रूम हटाने में विफल';
+
+  @override
+  String get roomRemovedSuccessfully =>
+      'रूम आपकी सूची से सफलतापूर्वक हटा दिया गया';
+
+  @override
+  String get alert => 'अलर्ट';
+
+  @override
+  String get removedFromRoom =>
+      'आपको कमरे से रिपोर्ट किया गया है या हटा दिया गया है';
+
+  @override
+  String reportType(String type) {
+    String _temp0 = intl.Intl.selectLogic(type, {
+      'harassment': 'हिंसा / नफरत भरा भाषण',
+      'abuse': 'दुरुपयोग सामग्री / हिंसा',
+      'spam': 'स्पैम / धोखाधड़ी',
+      'impersonation': 'नकली खाते',
+      'illegal': 'गैरकानूनी गतिविधियाँ',
+      'selfharm': 'आत्म-हानि / आत्महत्या / मानसिक स्वास्थ्य',
+      'misuse': 'प्लेटफ़ॉर्म का दुरुपयोग',
+      'other': 'अन्य',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String get userBlockedFromResonate =>
+      'आपको कई उपयोगकर्ताओं द्वारा रिपोर्ट किया गया है और आपको रेज़ोनेट का उपयोग करने से ब्लॉक कर दिया गया है। यदि आपको लगता है कि यह गलती है, तो कृपया AOSSIE से संपर्क करें।';
+
+  @override
+  String get reportParticipant => 'प्रतिभागी की रिपोर्ट करें';
+
+  @override
+  String get selectReportType => 'रिपोर्ट का प्रकार चुनें';
+
+  @override
+  String get reportSubmitted => 'रिपोर्ट सफलतापूर्वक सबमिट की गई';
+
+  @override
+  String get reportFailed => 'रिपोर्ट सबमिशन फेल';
+
+  @override
+  String get additionalDetailsOptional => 'अतिरिक्त विवरण (वैकल्पिक)';
+
+  @override
+  String get submitReport => 'रिपोर्ट सबमिट करें';
+
+  @override
+  String get actionBlocked => 'कार्रवाई अवरुद्ध';
+
+  @override
+  String get cannotStopRecording =>
+      'आप रिकॉर्डिंग को मैन्युअल रूप से रोक नहीं सकते, रिकॉर्डिंग तब रोकी जाएगी जब कमरा बंद होगा।';
+
+  @override
+  String get liveChapter => 'लाइव चैप्टर';
+
+  @override
+  String get viewOrEditLyrics => 'गीत देखें या संपादित करें';
+
+  @override
+  String get close => 'बंद करें';
+
+  @override
+  String get verifyChapterDetails => 'चैप्टर विवरण सत्यापित करें';
+
+  @override
+  String get author => 'लेखक';
+
+  @override
+  String get startLiveChapter => 'लाइव चैप्टर शुरू करें';
+
+  @override
+  String get fillAllFields => 'कृपया सभी आवश्यक फ़ील्ड भरें';
+
+  @override
+  String get noRecordingError =>
+      'आपके पास कोई रिकॉर्डिंग नहीं है। लाइव चैप्टर रूम से बाहर निकलने के लिए, कृपया पहले रिकॉर्डिंग शुरू करें।';
+
+  @override
+  String get deleteMessageTitle => 'संदेश हटाएँ';
+
+  @override
+  String get deleteMessageContent =>
+      'क्या आप वाकई इस संदेश को हटाना चाहते हैं?';
+
+  @override
+  String get thisMessageWasDeleted => 'यह संदेश हटा दिया गया है';
+
+  @override
+  String get failedToDeleteMessage => 'संदेश हटाने में विफल रहा';
 }

@@ -5,10 +5,12 @@ import 'package:resonate/bindings/profile_binding.dart';
 import 'package:resonate/controllers/friend_call_screen.dart';
 import 'package:resonate/themes/theme_screen.dart';
 import 'package:resonate/routes/app_routes.dart';
+import 'package:resonate/views/screens/app_preferences_screen.dart';
 import 'package:resonate/views/screens/create_story_screen.dart';
 import 'package:resonate/views/screens/explore_screen.dart';
 import 'package:resonate/views/screens/create_room_screen.dart';
 import 'package:resonate/views/screens/home_screen.dart';
+import 'package:resonate/views/screens/live_chapter_screen.dart';
 import 'package:resonate/views/screens/login_screen.dart';
 import 'package:resonate/views/screens/notifications_screen.dart';
 import 'package:resonate/views/screens/pair_chat_screen.dart';
@@ -29,6 +31,7 @@ import 'package:resonate/views/screens/landing_screen.dart';
 import 'package:resonate/views/screens/splash_screen.dart';
 import 'package:resonate/views/screens/tabview_screen.dart';
 import 'package:resonate/views/screens/reset_password_screen.dart';
+import 'package:resonate/views/screens/user_blocked_screen.dart';
 import 'package:resonate/views/screens/welcome_screen.dart';
 import '../bindings/tabview_binding.dart';
 import '../views/screens/about_app_screen.dart';
@@ -137,5 +140,14 @@ class AppPages {
     ),
     GetPage(name: AppRoutes.ringingScreen, page: () => RingingScreen()),
     GetPage(name: AppRoutes.friendCallScreen, page: () => FriendCallScreen()),
+    GetPage(
+      name: AppRoutes.userBlockedScreen,
+      page: () => const UserBlockedScreen(),
+    ),
+    GetPage(name: AppRoutes.liveChapterScreen, page: () => LiveChapterScreen()),
+    GetPage(
+      name: AppRoutes.appPreferencesScreen,
+      page: () => const AppPreferencesScreen(),
+    ),
   ];
 }

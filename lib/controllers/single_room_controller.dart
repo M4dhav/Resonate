@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:appwrite/appwrite.dart';
 import 'package:appwrite/models.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Row;
 
 import 'package:get/get.dart';
 
@@ -10,13 +10,17 @@ import 'package:resonate/controllers/auth_state_controller.dart';
 import 'package:resonate/controllers/livekit_controller.dart';
 import 'package:resonate/controllers/room_chat_controller.dart';
 import 'package:resonate/controllers/rooms_controller.dart';
+import 'package:resonate/l10n/app_localizations.dart';
 import 'package:resonate/models/appwrite_room.dart';
 import 'package:resonate/models/participant.dart';
 import 'package:resonate/routes/app_routes.dart';
 import 'package:resonate/services/appwrite_service.dart';
 import 'package:resonate/services/room_service.dart';
+import 'package:resonate/utils/enums/log_type.dart';
 import 'package:resonate/views/screens/room_chat_screen.dart';
 import 'package:resonate/views/widgets/loading_dialog.dart';
+import 'package:resonate/views/widgets/report_widget.dart';
+import 'package:resonate/views/widgets/snackbar.dart';
 
 import '../utils/constants.dart';
 
@@ -38,7 +42,7 @@ class SingleRoomController extends GetxController {
   Client client = AppwriteService.getClient();
   final AppwriteRoom appwriteRoom;
   final Realtime realtime = AppwriteService.getRealtime();
-  final Databases databases = AppwriteService.getDatabases();
+  final TablesDB tablesDB = AppwriteService.getTables();
   late final RealtimeSubscription? subscription;
   RxList<Rx<Participant>> participants = <Rx<Participant>>[].obs;
 
@@ -60,11 +64,11 @@ class SingleRoomController extends GetxController {
     super.onClose();
   }
 
-  Future<void> addParticipantDataToList(Document participant) async {
-    Document userDataDoc = await databases.getDocument(
+  Future<void> addParticipantDataToList(Row participant) async {
+    Row userDataDoc = await tablesDB.getRow(
       databaseId: userDatabaseID,
-      collectionId: usersCollectionID,
-      documentId: participant.data["uid"],
+      tableId: usersTableID,
+      rowId: participant.data["uid"],
     );
     final p = Rx(
       Participant(
@@ -99,6 +103,11 @@ class SingleRoomController extends GetxController {
         payload["hasRequestedToBeSpeaker"] ?? false;
     participants[toBeUpdatedIndex].value.isMicOn = payload["isMicOn"];
     participants[toBeUpdatedIndex].value.isSpeaker = payload["isSpeaker"];
+    if (payload["uid"] == auth.uid &&
+        !payload["isSpeaker"] &&
+        me.value.isMicOn) {
+      turnOffMic();
+    }
     update();
   }
 
@@ -106,12 +115,12 @@ class SingleRoomController extends GetxController {
     try {
       isLoading.value = true;
       participants.value = <Rx<Participant>>[];
-      var participantCollectionRef = await databases.listDocuments(
+      var participantCollectionRef = await tablesDB.listRows(
         databaseId: masterDatabaseId,
-        collectionId: participantsCollectionId,
+        tableId: participantsTableId,
         queries: [Query.equal('roomId', appwriteRoom.id)],
       );
-      for (Document participant in participantCollectionRef.documents) {
+      for (Row participant in participantCollectionRef.rows) {
         addParticipantDataToList(participant);
       }
       update();
@@ -124,7 +133,7 @@ class SingleRoomController extends GetxController {
 
   void getRealtimeStream() {
     String channel =
-        'databases.$masterDatabaseId.collections.$participantsCollectionId.documents';
+        'databases.$masterDatabaseId.tables.$participantsTableId.rows';
     subscription = realtime.subscribe([channel]);
     subscription?.stream.listen((data) async {
       if (data.payload.isNotEmpty) {
@@ -140,7 +149,7 @@ class SingleRoomController extends GetxController {
           switch (action) {
             case 'create':
               {
-                addParticipantDataToList(Document.fromMap(data.payload));
+                addParticipantDataToList(Row.fromMap(data.payload));
                 sortParticipants();
                 break;
               }
@@ -161,6 +170,11 @@ class SingleRoomController extends GetxController {
             case 'delete':
               {
                 if (updatedUserId == me.value.uid) {
+                  customSnackbar(
+                    AppLocalizations.of(Get.context!)!.alert,
+                    AppLocalizations.of(Get.context!)!.removedFromRoom,
+                    LogType.warning,
+                  );
                   await Get.delete<SingleRoomController>();
                 } else {
                   removeParticipantDataFromList(data.payload["uid"]);
@@ -201,6 +215,7 @@ class SingleRoomController extends GetxController {
 
   Future<void> leaveRoom() async {
     loadingDialog(Get.context!);
+    await subscription?.close();
     await RoomService.leaveRoom(roomId: appwriteRoom.id);
     Get.delete<SingleRoomController>();
   }
@@ -221,25 +236,25 @@ class SingleRoomController extends GetxController {
   }
 
   Future<String> getParticipantDocId(Participant participant) async {
-    var participantDocsRef = await databases.listDocuments(
+    var participantDocsRef = await tablesDB.listRows(
       databaseId: masterDatabaseId,
-      collectionId: participantsCollectionId,
+      tableId: participantsTableId,
       queries: [
         Query.equal('roomId', appwriteRoom.id),
         Query.equal('uid', participant.uid),
       ],
     );
-    return participantDocsRef.documents.first.$id;
+    return participantDocsRef.rows.first.$id;
   }
 
   Future<void> updateParticipantDoc(
     String participantDocId,
     Map<String, dynamic> data,
   ) async {
-    await databases.updateDocument(
+    await tablesDB.updateRow(
       databaseId: masterDatabaseId,
-      collectionId: participantsCollectionId,
-      documentId: participantDocId,
+      tableId: participantsTableId,
+      rowId: participantDocId,
       data: data,
     );
   }
@@ -290,6 +305,31 @@ class SingleRoomController extends GetxController {
     });
   }
 
+  Future<void> reportParticipant(Participant participant) async {
+    final bool? didSubmit = await Get.dialog(
+      ReportWidget(
+        participantName: participant.name,
+        participantId: participant.uid,
+      ),
+    );
+    if (didSubmit == true) {
+      try {
+        await tablesDB.updateRow(
+          databaseId: masterDatabaseId,
+          tableId: roomsTableId,
+          rowId: appwriteRoom.id,
+          data: {
+            "reportedUsers": [...appwriteRoom.reportedUsers, participant.uid],
+          },
+        );
+        appwriteRoom.reportedUsers.add(participant.uid);
+      } catch (e) {
+        log(e.toString());
+      }
+      kickOutParticipant(participant);
+    }
+  }
+
   Future<void> makeSpeaker(Participant participant) async {
     String participantDocId = await getParticipantDocId(participant);
     await updateParticipantDoc(participantDocId, {
@@ -308,10 +348,10 @@ class SingleRoomController extends GetxController {
 
   Future<void> kickOutParticipant(Participant participant) async {
     String participantDocId = await getParticipantDocId(participant);
-    await databases.deleteDocument(
+    await tablesDB.deleteRow(
       databaseId: masterDatabaseId,
-      collectionId: participantsCollectionId,
-      documentId: participantDocId,
+      tableId: participantsTableId,
+      rowId: participantDocId,
     );
   }
 

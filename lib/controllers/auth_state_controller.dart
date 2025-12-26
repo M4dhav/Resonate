@@ -1,19 +1,17 @@
 import 'dart:developer';
 import 'package:appwrite/appwrite.dart';
-import 'package:appwrite/enums.dart';
+import 'package:appwrite/enums.dart' hide Theme;
 import 'package:appwrite/models.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Row;
 import 'package:flutter_callkit_incoming/entities/call_event.dart';
 import 'package:flutter_callkit_incoming/entities/call_kit_params.dart';
 import 'package:flutter_callkit_incoming/flutter_callkit_incoming.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:resonate/controllers/about_app_screen_controller.dart';
 import 'package:resonate/controllers/friend_calling_controller.dart';
 import 'package:resonate/controllers/friends_controller.dart';
-import 'package:resonate/controllers/about_app_screen_controller.dart';
 import 'package:resonate/controllers/upcomming_rooms_controller.dart';
 import 'package:resonate/controllers/tabview_controller.dart';
 import 'package:resonate/models/follower_user_model.dart';
@@ -27,19 +25,19 @@ import 'package:resonate/l10n/app_localizations.dart';
 
 class AuthStateController extends GetxController {
   Client client;
-  final Databases databases;
+  final TablesDB tables;
   var isInitializing = false.obs;
   FirebaseMessaging messaging;
   late final Account account;
 
   AuthStateController({
     Account? account,
-    Databases? databases,
+    TablesDB? tables,
     Client? client,
     FirebaseMessaging? messaging,
   }) : client = client ?? AppwriteService.getClient(),
        account = account ?? AppwriteService.getAccount(),
-       databases = databases ?? AppwriteService.getDatabases(),
+       tables = tables ?? AppwriteService.getTables(),
        messaging = messaging ?? FirebaseMessaging.instance;
   late String? uid;
   late String? profileImageID;
@@ -53,6 +51,7 @@ class AuthStateController extends GetxController {
   late int ratingCount;
   late User appwriteUser;
   late List<FollowerUserModel> followerDocuments;
+  late int reportsCount;
 
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
@@ -109,7 +108,7 @@ class AuthStateController extends GetxController {
     await setUserProfileData();
 
     // ask for settings permissions
-    NotificationSettings settings = await messaging.requestPermission(
+    await messaging.requestPermission(
       alert: true,
       announcement: false,
       badge: true,
@@ -204,10 +203,10 @@ class AuthStateController extends GetxController {
       isUserProfileComplete =
           appwriteUser.prefs.data["isUserProfileComplete"] ?? false;
       if (isUserProfileComplete == true) {
-        Document userDataDoc = await databases.getDocument(
+        Row userDataDoc = await tables.getRow(
           databaseId: userDatabaseID,
-          collectionId: usersCollectionID,
-          documentId: appwriteUser.$id,
+          tableId: usersTableID,
+          rowId: appwriteUser.$id,
         );
         profileImageUrl = userDataDoc.data["profileImageUrl"];
         profileImageID = userDataDoc.data["profileImageID"];
@@ -219,6 +218,8 @@ class AuthStateController extends GetxController {
               return FollowerUserModel.fromJson(e);
             }).toList() ??
             [];
+        reportsCount =
+            (userDataDoc.data['userReports'] as List<dynamic>?)?.length ?? 0;
       }
 
       update();
@@ -235,8 +236,9 @@ class AuthStateController extends GetxController {
   Future<void> isUserLoggedIn() async {
     try {
       await setUserProfileData();
-      if (Get.isRegistered<AboutAppScreenController>()) {
-        Get.find<AboutAppScreenController>().checkForUpdate();
+      if (reportsCount > 5) {
+        Get.offNamed(AppRoutes.userBlockedScreen);
+        return;
       }
       if (isUserProfileComplete == false) {
         Get.offNamed(AppRoutes.onBoarding);
@@ -271,44 +273,44 @@ class AuthStateController extends GetxController {
     final fcmToken = await messaging.getToken();
 
     //subscribed Upcoming Rooms
-    List<Document> subscribedUpcomingRooms = await databases
-        .listDocuments(
+    List<Row> subscribedUpcomingRooms = await tables
+        .listRows(
           databaseId: upcomingRoomsDatabaseId,
-          collectionId: subscribedUserCollectionId,
+          tableId: subscribedUserTableId,
           queries: [
             Query.equal("userID", [uid]),
           ],
         )
-        .then((value) => value.documents);
+        .then((value) => value.rows);
     for (var subscription in subscribedUpcomingRooms) {
       List<dynamic> registrationTokens =
           subscription.data['registrationTokens'];
       registrationTokens.add(fcmToken!);
-      databases.updateDocument(
+      tables.updateRow(
         databaseId: upcomingRoomsDatabaseId,
-        collectionId: subscribedUserCollectionId,
-        documentId: subscription.$id,
+        tableId: subscribedUserTableId,
+        rowId: subscription.$id,
         data: {"registrationTokens": registrationTokens},
       );
     }
 
     //created Upcoming Rooms
-    List<Document> createdUpcomingRooms = await databases
-        .listDocuments(
+    List<Row> createdUpcomingRooms = await tables
+        .listRows(
           databaseId: upcomingRoomsDatabaseId,
-          collectionId: upcomingRoomsCollectionId,
+          tableId: upcomingRoomsTableId,
           queries: [
             Query.equal("creatorUid", [uid]),
           ],
         )
-        .then((value) => value.documents);
+        .then((value) => value.rows);
     for (var upcomingRoom in createdUpcomingRooms) {
       List<dynamic> creatorFcmTokens = upcomingRoom.data['creator_fcm_tokens'];
       creatorFcmTokens.add(fcmToken!);
-      databases.updateDocument(
+      tables.updateRow(
         databaseId: upcomingRoomsDatabaseId,
-        collectionId: upcomingRoomsCollectionId,
-        documentId: upcomingRoom.$id,
+        tableId: upcomingRoomsTableId,
+        rowId: upcomingRoom.$id,
         data: {"creator_fcm_tokens": creatorFcmTokens},
       );
     }
@@ -318,44 +320,44 @@ class AuthStateController extends GetxController {
     final fcmToken = await messaging.getToken();
 
     //subscribed Upcoming Rooms
-    List<Document> subscribedUpcomingRooms = await databases
-        .listDocuments(
+    List<Row> subscribedUpcomingRooms = await tables
+        .listRows(
           databaseId: upcomingRoomsDatabaseId,
-          collectionId: subscribedUserCollectionId,
+          tableId: subscribedUserTableId,
           queries: [
             Query.equal("userID", [uid]),
           ],
         )
-        .then((value) => value.documents);
+        .then((value) => value.rows);
     for (var subscription in subscribedUpcomingRooms) {
       List<dynamic> registrationTokens =
           subscription.data['registrationTokens'];
       registrationTokens.remove(fcmToken!);
-      databases.updateDocument(
+      tables.updateRow(
         databaseId: upcomingRoomsDatabaseId,
-        collectionId: subscribedUserCollectionId,
-        documentId: subscription.$id,
+        tableId: subscribedUserTableId,
+        rowId: subscription.$id,
         data: {"registrationTokens": registrationTokens},
       );
     }
 
     //created Upcoming Rooms
-    List<Document> createdUpcomingRooms = await databases
-        .listDocuments(
+    List<Row> createdUpcomingRooms = await tables
+        .listRows(
           databaseId: upcomingRoomsDatabaseId,
-          collectionId: upcomingRoomsCollectionId,
+          tableId: upcomingRoomsTableId,
           queries: [
             Query.equal("creatorUid", [uid]),
           ],
         )
-        .then((value) => value.documents);
+        .then((value) => value.rows);
     for (var upcomingRoom in createdUpcomingRooms) {
       List<dynamic> creatorFcmTokens = upcomingRoom.data['creator_fcm_tokens'];
       creatorFcmTokens.remove(fcmToken!);
-      databases.updateDocument(
+      tables.updateRow(
         databaseId: upcomingRoomsDatabaseId,
-        collectionId: upcomingRoomsCollectionId,
-        documentId: upcomingRoom.$id,
+        tableId: upcomingRoomsTableId,
+        rowId: upcomingRoom.$id,
         data: {"creator_fcm_tokens": creatorFcmTokens},
       );
     }

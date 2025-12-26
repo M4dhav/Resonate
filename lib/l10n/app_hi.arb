@@ -1,29 +1,100 @@
 {
     "@@locale": "hi",
     "title": "रेज़ोनेट",
+    "@title": {
+        "description": "The title of the application."
+    },
     "roomDescription": "विनम्र रहें और दूसरे व्यक्ति की राय का सम्मान करें। अभद्र टिप्पणियों से बचें।",
+    "@roomDescription": {
+        "description": "Guideline message for users in a chat room."
+    },
     "hidePassword": "पासवर्ड छिपाएं",
+    "@hidePassword": {
+        "description": "Button text to conceal the password field."
+    },
     "showPassword": "पासवर्ड दिखाएं",
+    "@showPassword": {
+        "description": "Button text to reveal the password field."
+    },
     "passwordEmpty": "पासवर्ड खाली नहीं हो सकता",
+    "@passwordEmpty": {
+        "description": "Error message when the password field is left blank."
+    },
     "password": "पासवर्ड",
+    "@password": {
+        "description": "Label for the password input field."
+    },
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "@confirmPassword": {
+        "description": "Label for the confirm password input field."
+    },
+    "passwordsNotMatch": "पासवर्ड मेल नहीं खा रहे हैं",
+    "@passwordsNotMatch": {
+        "description": "Error message when password and confirmation password do not match."
+    },
     "userCreatedStories": "यूज़र की बनाई कहानियाँ",
+    "@userCreatedStories": {
+        "description": "Header for the section showing stories created by another user."
+    },
     "yourStories": "तुम्हारी कहानियाँ",
+    "@yourStories": {
+        "description": "Header for the section showing stories created by the current user."
+    },
     "userNoStories": "यूज़र ने अभी तक कोई कहानी नहीं बनाई",
+    "@userNoStories": {
+        "description": "Message displayed when viewing another user's profile and they have no stories."
+    },
     "youNoStories": "तुमने अभी तक कोई कहानी नहीं बनाई",
+    "@youNoStories": {
+        "description": "Message displayed on the current user's profile when they have no stories."
+    },
     "follow": "फॉलो करो",
+    "@follow": {
+        "description": "Button text to follow a user."
+    },
     "editProfile": "प्रोफाइल एडिट करो",
+    "@editProfile": {
+        "description": "Button text to navigate to the profile editing screen."
+    },
     "verifyEmail": "ईमेल वेरीफाई करो",
+    "@verifyEmail": {
+        "description": "Button or link text to start the email verification process."
+    },
     "verified": "वेरीफाइड",
+    "@verified": {
+        "description": "A status label indicating that the user's email has been verified."
+    },
     "profile": "प्रोफ़ाइल",
+    "@profile": {
+        "description": "Label for the user profile section or page."
+    },
     "userLikedStories": "यूज़र को पसंद आई कहानियाँ",
+    "@userLikedStories": {
+        "description": "Header for the section showing stories liked by another user."
+    },
     "yourLikedStories": "तुम्हें पसंद आई कहानियाँ",
+    "@yourLikedStories": {
+        "description": "Header for the section showing stories liked by the current user."
+    },
     "userNoLikedStories": "यूज़र ने अभी तक कोई कहानी लाइक नहीं की",
+    "@userNoLikedStories": {
+        "description": "Message displayed when viewing another user's profile and they have no liked stories."
+    },
     "youNoLikedStories": "तुमने अभी तक कोई कहानी लाइक नहीं की",
+    "@youNoLikedStories": {
+        "description": "Message displayed on the current user's profile when they have no liked stories."
+    },
     "live": "लाइव",
+    "@live": {
+        "description": "Tab or label for live audio rooms."
+    },
     "upcoming": "आने वाला",
+    "@upcoming": {
+        "description": "Tab or label for scheduled/upcoming audio rooms."
+    },
     "noAvailableRoom": "{isRoom, select, true{कोई रूम उपलब्ध नहीं है} false{कोई आने वाला रूम उपलब्ध नहीं है} other{रूम की जानकारी उपलब्ध नहीं है}}\nनीचे से एक रूम बनाकर शुरुआत करें!",
     "@noAvailableRoom": {
-        "description": "जब कोई रूम या आने वाला रूम उपलब्ध नहीं होता तब दिखाया जाने वाला संदेश",
+        "description": "Message when no room or upcoming room is available, with a call to action.",
         "placeholders": {
             "isRoom": {
                 "type": "String",
@@ -32,122 +103,524 @@
         }
     },
     "user1": "यूज़र 1",
+    "@user1": {
+        "description": "A generic placeholder name for a user."
+    },
     "user2": "यूज़र 2",
+    "@user2": {
+        "description": "A second generic placeholder name for a user."
+    },
     "you": "तुम",
+    "@you": {
+        "description": "Label to identify the current user in a list or chat."
+    },
     "areYouSure": "क्या आप पक्के हैं?",
+    "@areYouSure": {
+        "description": "Confirmation prompt title."
+    },
     "loggingOut": "आप रेज़ोनेट से लॉग आउट हो रहे हैं।",
+    "@loggingOut": {
+        "description": "Confirmation prompt message for logging out."
+    },
     "yes": "हाँ",
+    "@yes": {
+        "description": "Generic confirmation button text."
+    },
     "no": "नहीं",
+    "@no": {
+        "description": "Generic cancellation button text."
+    },
     "incorrectEmailOrPassword": "ईमेल या पासवर्ड गलत है",
+    "@incorrectEmailOrPassword": {
+        "description": "Error message for failed login attempt."
+    },
     "passwordShort": "पासवर्ड 8 अक्षर से छोटा है",
+    "@passwordShort": {
+        "description": "Error message for a password that is too short."
+    },
     "tryAgain": "फिर कोशिश करो!",
+    "@tryAgain": {
+        "description": "Button text to retry a failed action."
+    },
     "success": "सफलता",
+    "@success": {
+        "description": "Generic title for a successful operation."
+    },
     "passwordResetSent": "पासवर्ड रीसेट ईमेल भेजा गया!",
+    "@passwordResetSent": {
+        "description": "Success message after a password reset email has been dispatched."
+    },
     "error": "गलती",
+    "@error": {
+        "description": "Generic title for a failed operation."
+    },
     "resetPassword": "पासवर्ड रीसेट करो",
+    "@resetPassword": {
+        "description": "Title or button text for the reset password feature."
+    },
     "enterNewPassword": "नया पासवर्ड डालो",
+    "@enterNewPassword": {
+        "description": "Instructional text on the reset password screen."
+    },
     "newPassword": "नया पासवर्ड",
+    "@newPassword": {
+        "description": "Label for the new password input field."
+    },
     "setNewPassword": "नया पासवर्ड सेट करो",
+    "@setNewPassword": {
+        "description": "Button text to confirm setting a new password."
+    },
     "emailChanged": "ईमेल बदल दी गई",
+    "@emailChanged": {
+        "description": "Title for the success dialog after an email change."
+    },
     "emailChangeSuccess": "ईमेल सफलतापूर्वक बदल गई!",
+    "@emailChangeSuccess": {
+        "description": "Success message after changing the user's email."
+    },
     "failed": "नाकाम",
+    "@failed": {
+        "description": "Generic title for a failed operation."
+    },
     "emailChangeFailed": "ईमेल बदलने में नाकाम",
+    "@emailChangeFailed": {
+        "description": "Error message when an email change operation fails."
+    },
     "oops": "उफ़!",
+    "@oops": {
+        "description": "An informal title for an error or warning message."
+    },
     "emailExists": "ईमेल पहले से मौजूद है",
+    "@emailExists": {
+        "description": "Error message when a user tries to register or change to an email that is already in use."
+    },
     "changeEmail": "ईमेल बदलो",
+    "@changeEmail": {
+        "description": "Title or button text for the change email feature."
+    },
     "enterValidEmail": "कृपया एक मान्य ईमेल डालो",
+    "@enterValidEmail": {
+        "description": "Error message for an invalid email format."
+    },
     "newEmail": "नया ईमेल",
+    "@newEmail": {
+        "description": "Label for the new email input field."
+    },
     "currentPassword": "मौजूदा पासवर्ड",
+    "@currentPassword": {
+        "description": "Label for the current password input field, used for verification."
+    },
     "emailChangeInfo": "सुरक्षा के लिए, ईमेल बदलने के लिए मौजूदा पासवर्ड डालें। बदलने के बाद, नए ईमेल से लॉगिन करें।",
+    "@emailChangeInfo": {
+        "description": "Informational text explaining the process and security requirements for changing an email address for standard users."
+    },
     "oauthUsersMessage": "(केवल Google या Github से लॉगिन करने वाले यूज़र्स के लिए)",
+    "@oauthUsersMessage": {
+        "description": "A message to specify that the following instructions are for OAuth users."
+    },
     "oauthUsersEmailChangeInfo": "ईमेल बदलने के लिए, \"मौजूदा पासवर्ड\" फील्ड में नया पासवर्ड डालें। इसे याद रखें—आगे केवल Google/GitHub या नए पासवर्ड से लॉगिन होगा।",
+    "@oauthUsersEmailChangeInfo": {
+        "description": "Informational text explaining how users who signed up via Google or GitHub can change their email by setting a new password."
+    },
     "resonateTagline": "बातों की एक अनंत दुनिया में कदम रखें",
+    "@resonateTagline": {
+        "description": "The application's tagline, used on splash or login screens."
+    },
     "signInWithEmail": "ईमेल से साइन इन करो",
+    "@signInWithEmail": {
+        "description": "Button text for signing in using email and password."
+    },
     "or": "या",
+    "@or": {
+        "description": "A separator text, typically used between different login options."
+    },
     "continueWith": "इनमें से किसी एक से लॉगिन करें",
+    "@continueWith": {
+        "description": "Informational text preceding a list of third-party login providers."
+    },
     "continueWithGoogle": "Google से लॉगिन करें",
+    "@continueWithGoogle": {
+        "description": "Button text for signing in with a Google account."
+    },
     "continueWithGitHub": "GitHub से लॉगिन करें",
+    "@continueWithGitHub": {
+        "description": "Button text for signing in with a GitHub account."
+    },
     "resonateLogo": "रेज़ोनेट लोगो",
+    "@resonateLogo": {
+        "description": "Accessibility text for the Resonate application logo image."
+    },
     "iAlreadyHaveAnAccount": "मेरे पास पहले से एक अकाउंट है",
+    "@iAlreadyHaveAnAccount": {
+        "description": "Text for a link or button to navigate to the login screen from the sign-up screen."
+    },
     "createNewAccount": "नया अकाउंट बनाओ",
+    "@createNewAccount": {
+        "description": "Text for a link or button to navigate to the sign-up screen from the login screen."
+    },
     "userProfile": "यूज़र प्रोफ़ाइल",
+    "@userProfile": {
+        "description": "Accessibility text for a user's profile picture or avatar."
+    },
     "passwordIsStrong": "पासवर्ड मजबूत है",
+    "@passwordIsStrong": {
+        "description": "Validation message indicating that the entered password meets all strength requirements."
+    },
     "admin": "एडमिन",
+    "@admin": {
+        "description": "Label for the Admin user role in a room."
+    },
     "moderator": "मॉडरेटर",
+    "@moderator": {
+        "description": "Label for the Moderator user role in a room."
+    },
     "speaker": "स्पीकर",
+    "@speaker": {
+        "description": "Label for the Speaker user role in a room."
+    },
     "listener": "लिस्नर",
+    "@listener": {
+        "description": "Label for the Listener user role in a room."
+    },
     "removeModerator": "मॉडरेटर हटाओ",
+    "@removeModerator": {
+        "description": "Menu item text to revoke moderator privileges from a user."
+    },
     "kickOut": "किक आउट करो",
+    "@kickOut": {
+        "description": "Menu item text to remove a user from a room."
+    },
     "addModerator": "मॉडरेटर जोड़ो",
+    "@addModerator": {
+        "description": "Menu item text to grant moderator privileges to a user."
+    },
     "addSpeaker": "स्पीकर जोड़ो",
+    "@addSpeaker": {
+        "description": "Menu item text to grant speaker privileges to a listener."
+    },
     "makeListener": "लिस्नर बनाओ",
+    "@makeListener": {
+        "description": "Menu item text to change a speaker's role to listener."
+    },
     "pairChat": "पेयर चैट",
+    "@pairChat": {
+        "description": "A feature name for one-on-one random chat."
+    },
     "chooseIdentity": "पहचान चुनें",
+    "@chooseIdentity": {
+        "description": "Prompt for the user to choose their identity, e.g., anonymous or public."
+    },
     "selectLanguage": "भाषा चुनें",
+    "@selectLanguage": {
+        "description": "Label for the language selection setting."
+    },
     "noConnection": "कोई कनेक्शन नहीं",
+    "@noConnection": {
+        "description": "Title indicating that there is no internet connection."
+    },
     "loadingDialog": "लोड हो रहा है...",
+    "@loadingDialog": {
+        "description": "Accessibility text for a loading indicator or spinner."
+    },
     "createAccount": "अकाउंट बनाओ",
+    "@createAccount": {
+        "description": "Button text or page title for the account creation screen."
+    },
     "enterValidEmailAddress": "मान्य ईमेल पता डालो",
+    "@enterValidEmailAddress": {
+        "description": "Error message shown for an invalid email format."
+    },
     "email": "ईमेल",
+    "@email": {
+        "description": "Label for the email input field."
+    },
     "passwordRequirements": "पासवर्ड कम से कम 8 अक्षर का होना चाहिए",
+    "@passwordRequirements": {
+        "description": "Instructional text listing the requirements for a valid password, part 1."
+    },
     "includeNumericDigit": "कम से कम 1 संख्या शामिल करें",
+    "@includeNumericDigit": {
+        "description": "Instructional text listing the requirements for a valid password, part 2."
+    },
     "includeUppercase": "कम से कम 1 कैपिटल लेटर शामिल करें",
+    "@includeUppercase": {
+        "description": "Instructional text listing the requirements for a valid password, part 3."
+    },
     "includeLowercase": "कम से कम 1 लोअरकेस लेटर शामिल करें",
+    "@includeLowercase": {
+        "description": "Instructional text listing the requirements for a valid password, part 4."
+    },
     "includeSymbol": "कम से कम 1 सिम्बल शामिल करें",
+    "@includeSymbol": {
+        "description": "Instructional text listing the requirements for a valid password, part 5."
+    },
     "signedUpSuccessfully": "सफलतापूर्वक साइन अप हो गया!",
+    "@signedUpSuccessfully": {
+        "description": "Title for a success message after account creation."
+    },
     "newAccountCreated": "आपका नया अकाउंट सफलतापूर्वक बन गया है",
+    "@newAccountCreated": {
+        "description": "Success message confirming that a new account has been created."
+    },
     "signUp": "साइन अप",
+    "@signUp": {
+        "description": "Button text to submit the sign-up form."
+    },
     "login": "लॉगिन",
+    "@login": {
+        "description": "Button text to submit the login form."
+    },
     "settings": "सेटिंग्स",
+    "@settings": {
+        "description": "Title for the settings page."
+    },
     "accountSettings": "अकाउंट सेटिंग्स",
+    "@accountSettings": {
+        "description": "Sub-header for account-related settings."
+    },
     "account": "अकाउंट",
+    "@account": {
+        "description": "Label for the account settings section."
+    },
     "appSettings": "ऐप की सेटिंग्स",
+    "@appSettings": {
+        "description": "Sub-header for application-related settings."
+    },
     "themes": "थीम्स",
+    "@themes": {
+        "description": "Label for the theme selection setting."
+    },
     "about": "रेज़ोनेट के बारे में",
+    "@about": {
+        "description": "Label for the 'About' section or page of the app or a story."
+    },
     "other": "अन्य",
+    "@other": {
+        "description": "A generic category label for miscellaneous settings or items."
+    },
     "contribute": "योगदान करें",
+    "@contribute": {
+        "description": "Label for a section encouraging users to contribute to the project."
+    },
+    "appPreferences": "ऐप प्राथमिकताएं",
+    "@appPreferences": {
+        "description": "Label for the app preferences settings page."
+    },
+    "transcriptionModel": "ट्रांसक्रिप्शन मॉडल",
+    "@transcriptionModel": {
+        "description": "Section title for choosing AI transcription model."
+    },
+    "transcriptionModelDescription": "वॉयस ट्रांसक्रिप्शन के लिए AI मॉडल चुनें। बड़े मॉडल अधिक सटीक हैं लेकिन धीमे हैं और अधिक स्टोरेज की आवश्यकता होती है।",
+    "@transcriptionModelDescription": {
+        "description": "Description text explaining transcription model choices."
+    },
+    "whisperModelTiny": "टाइनी",
+    "@whisperModelTiny": {
+        "description": "Name of the smallest Whisper AI model."
+    },
+    "whisperModelTinyDescription": "सबसे तेज़, कम सटीक (~39 MB)",
+    "@whisperModelTinyDescription": {
+        "description": "Description of the Tiny Whisper model performance and size."
+    },
+    "whisperModelBase": "बेस",
+    "@whisperModelBase": {
+        "description": "Name of the base Whisper AI model."
+    },
+    "whisperModelBaseDescription": "संतुलित गति और सटीकता (~74 MB)",
+    "@whisperModelBaseDescription": {
+        "description": "Description of the Base Whisper model performance and size."
+    },
+    "whisperModelSmall": "स्मॉल",
+    "@whisperModelSmall": {
+        "description": "Name of the small Whisper AI model."
+    },
+    "whisperModelSmallDescription": "अच्छी सटीकता, धीमा (~244 MB)",
+    "@whisperModelSmallDescription": {
+        "description": "Description of the Small Whisper model performance and size."
+    },
+    "whisperModelMedium": "मीडियम",
+    "@whisperModelMedium": {
+        "description": "Name of the medium Whisper AI model."
+    },
+    "whisperModelMediumDescription": "उच्च सटीकता, धीमा (~769 MB)",
+    "@whisperModelMediumDescription": {
+        "description": "Description of the Medium Whisper model performance and size."
+    },
+    "whisperModelLargeV1": "लार्ज V1",
+    "@whisperModelLargeV1": {
+        "description": "Name of the large V1 Whisper AI model."
+    },
+    "whisperModelLargeV1Description": "सबसे अधिक सटीक, सबसे धीमा (~1.55 GB)",
+    "@whisperModelLargeV1Description": {
+        "description": "Description of the Large V1 Whisper model performance and size."
+    },
+    "whisperModelLargeV2": "लार्ज V2",
+    "@whisperModelLargeV2": {
+        "description": "Name of the large V2 Whisper AI model."
+    },
+    "whisperModelLargeV2Description": "उच्च सटीकता के साथ बेहतर बड़ा मॉडल (~1.55 GB)",
+    "@whisperModelLargeV2Description": {
+        "description": "Description of the Large V2 Whisper model performance and size."
+    },
+    "modelDownloadInfo": "मॉडल पहली बार उपयोग करने पर डाउनलोड हो जाते हैं। हम बेस, स्मॉल या मीडियम का उपयोग करने की सिफारिश करते हैं। बड़े मॉडल के लिए बहुत उच्च अंत उपकरणों की आवश्यकता होती है।",
+    "@modelDownloadInfo": {
+        "description": "Information message about model download."
+    },
     "logOut": "लॉग आउट",
+    "@logOut": {
+        "description": "Button text to log the user out of their account."
+    },
     "participants": "पार्टिसिपेंट्स",
+    "@participants": {
+        "description": "Label or title for the list of participants in a room."
+    },
     "delete": "डिलीट",
+    "@delete": {
+        "description": "Generic button text for a delete action. Parameter for toRoomAction."
+    },
     "leave": "छोड़ो",
+    "@leave": {
+        "description": "Generic button text for a leave action. Parameter for toRoomAction."
+    },
     "leaveButton": "छोड़ो",
+    "@leaveButton": {
+        "description": "Button text to leave a room or conversation."
+    },
     "findingRandomPartner": "आपके लिए एक रैंडम पार्टनर ढूंढ रहे हैं",
+    "@findingRandomPartner": {
+        "description": "Status message shown while the system is searching for a random chat partner."
+    },
     "quickFact": "त्वरित तथ्य",
+    "@quickFact": {
+        "description": "Header for a quick fact or tip, often shown during loading."
+    },
     "cancel": "कैंसल",
+    "@cancel": {
+        "description": "Generic button text for a cancel action."
+    },
     "completeYourProfile": "अपनी प्रोफ़ाइल पूरी करो",
+    "@completeYourProfile": {
+        "description": "Page title or prompt for the user to finish setting up their profile."
+    },
     "uploadProfilePicture": "प्रोफ़ाइल पिक्चर अपलोड करो",
+    "@uploadProfilePicture": {
+        "description": "Instructional text or button to upload a profile picture."
+    },
     "enterValidName": "मान्य नाम डालो",
+    "@enterValidName": {
+        "description": "Error message for an invalid name format."
+    },
     "name": "नाम",
+    "@name": {
+        "description": "Label for the name input field."
+    },
     "username": "यूज़रनेम",
+    "@username": {
+        "description": "Label for the username input field."
+    },
     "enterValidDOB": "सही तारीख़ डालो",
+    "@enterValidDOB": {
+        "description": "Error message for an invalid date of birth."
+    },
     "dateOfBirth": "जन्म तिथि",
+    "@dateOfBirth": {
+        "description": "Label for the date of birth input field."
+    },
     "forgotPassword": "पासवर्ड भूल गए?",
+    "@forgotPassword": {
+        "description": "Link text for users who have forgotten their password."
+    },
     "next": "आगे",
+    "@next": {
+        "description": "Button text to proceed to the next step in a process."
+    },
     "noStoriesExist": "कोई कहानी अभी मौजूद नहीं है",
+    "@noStoriesExist": {
+        "description": "Message displayed when there are no stories available in a list."
+    },
     "enterVerificationCode": "अपना\nवेरिफिकेशन कोड दर्ज करें",
+    "@enterVerificationCode": {
+        "description": "Prompt for the user to enter the verification code sent to their email."
+    },
     "verificationCodeSent": "हमने 6-अंकों का कोड भेजा है\n",
+    "@verificationCodeSent": {
+        "description": "Message informing the user that a verification code has been sent. The email address is appended in the code."
+    },
     "verificationComplete": "वेरिफिकेशन पूरा हो गया",
+    "@verificationComplete": {
+        "description": "Title for a success message after email verification."
+    },
     "verificationCompleteMessage": "बधाई हो! आपका ईमेल वेरिफाई हो गया है",
+    "@verificationCompleteMessage": {
+        "description": "Success message confirming email verification."
+    },
     "verificationFailed": "वेरिफिकेशन फेल हो गया",
+    "@verificationFailed": {
+        "description": "Title for an error message when verification fails."
+    },
     "otpMismatch": "OTP मेल नहीं खा रहा, कृपया फिर से प्रयास करें",
+    "@otpMismatch": {
+        "description": "Error message when the entered OTP is incorrect."
+    },
     "otpResent": "OTP दोबारा भेजा गया",
+    "@otpResent": {
+        "description": "Confirmation message that the OTP has been resent."
+    },
     "requestNewCode": "नया कोड माँगें",
+    "@requestNewCode": {
+        "description": "Button text to request a new verification code."
+    },
     "requestNewCodeIn": "नया कोड माँगने के लिए प्रतीक्षा करें",
+    "@requestNewCodeIn": {
+        "description": "Text displayed before a countdown timer for requesting a new code."
+    },
     "clickPictureCamera": "कैमरा से फोटो लें",
+    "@clickPictureCamera": {
+        "description": "Option to take a new photo using the device camera."
+    },
     "pickImageGallery": "गैलरी से इमेज चुनें",
+    "@pickImageGallery": {
+        "description": "Option to choose an existing image from the device gallery."
+    },
     "deleteMyAccount": "मेरा अकाउंट डिलीट करें",
+    "@deleteMyAccount": {
+        "description": "Button text for the account deletion feature."
+    },
     "createNewRoom": "नया रूम बनाएं",
+    "@createNewRoom": {
+        "description": "Button text or page title for creating a new audio room."
+    },
     "pleaseEnterScheduledDateTime": "कृपया निर्धारित तारीख और समय डालें",
+    "@pleaseEnterScheduledDateTime": {
+        "description": "Error message when the scheduled date and time for a room is not provided."
+    },
     "scheduleDateTimeLabel": "शेड्यूल तारीख व समय",
+    "@scheduleDateTimeLabel": {
+        "description": "Label for the input field to schedule a room's date and time."
+    },
     "enterTags": "टैग डालें",
+    "@enterTags": {
+        "description": "Placeholder or label for the input field for adding tags to a room or story."
+    },
     "joinCommunity": "कम्युनिटी से जुड़ें",
+    "@joinCommunity": {
+        "description": "Button text or header for the community section."
+    },
     "followUsOnX": "X पर हमें फॉलो करें",
+    "@followUsOnX": {
+        "description": "Link text to the company's profile on X (formerly Twitter)."
+    },
     "joinDiscordServer": "Discord सर्वर से जुड़ें",
+    "@joinDiscordServer": {
+        "description": "Link text to join the project's Discord server."
+    },
     "noLyrics": "कोई लिरिक्स उपलब्ध नहीं",
-    "aboutSection": "चैप्टर के बारे में",
+    "@noLyrics": {
+        "description": "Message displayed when lyrics for an audio file are not available."
+    },
     "noStoriesInCategory": "{categoryName} श्रेणी में कोई कहानी नहीं है",
     "@noStoriesInCategory": {
-        "description": "Message when no stories exist in a category",
+        "description": "Message when no stories exist in a specific category.",
         "placeholders": {
             "categoryName": {
                 "type": "String",
@@ -155,23 +628,65 @@
             }
         }
     },
-    "pushNewChapters": "नए चैप्टर्स जोड़ें",
+    "newChapters": "नए चैप्टर्स जोड़ें",
+    "@newChapters": {
+        "description": "Header or label for the section to add or view new chapters of a story."
+    },
     "helpToGrow": "साथ मिलकर बढ़ाएं",
+    "@helpToGrow": {
+        "description": "A call to action asking users to help the platform grow, often a header for sharing/rating."
+    },
     "share": "शेयर करें",
+    "@share": {
+        "description": "Button text for sharing content."
+    },
     "rate": "रेटिंग दें",
+    "@rate": {
+        "description": "Button text for rating the app or content."
+    },
     "aboutResonate": "रेज़ोनेट के बारे में",
+    "@aboutResonate": {
+        "description": "Title for the 'About' page of the Resonate application."
+    },
     "description": "विवरण",
+    "@description": {
+        "description": "Label for a description field."
+    },
     "confirm": "पुष्टि करें",
+    "@confirm": {
+        "description": "Generic button text for a confirm action."
+    },
     "classic": "क्लासिक",
+    "@classic": {
+        "description": "Name of a theme option."
+    },
     "time": "टाइम",
+    "@time": {
+        "description": "Name of a theme option."
+    },
     "vintage": "विंटेज",
+    "@vintage": {
+        "description": "Name of a theme option."
+    },
     "amber": "अंबर",
+    "@amber": {
+        "description": "Name of a theme option."
+    },
     "forest": "फॉरेस्ट",
+    "@forest": {
+        "description": "Name of a theme option."
+    },
     "cream": "क्रीम",
+    "@cream": {
+        "description": "Name of a theme option."
+    },
     "none": "कोई नहीं",
+    "@none": {
+        "description": "Text representing no selection or absence of a value."
+    },
     "checkOutGitHub": "हमारा GitHub रेपो देखें: {url}",
     "@checkOutGitHub": {
-        "description": "Share message for GitHub repository",
+        "description": "Share message for the GitHub repository, including a placeholder for the URL.",
         "placeholders": {
             "url": {
                 "type": "String",
@@ -180,26 +695,80 @@
         }
     },
     "aossie": "AOSSIE",
+    "@aossie": {
+        "description": "The name of the organization."
+    },
     "aossieLogo": "AOSSIE लोगो",
+    "@aossieLogo": {
+        "description": "Accessibility text for the AOSSIE organization logo."
+    },
     "errorLoadPackageInfo": "पैकेज जानकारी लोड नहीं हो सकी",
+    "@errorLoadPackageInfo": {
+        "description": "Error message when the application fails to load its package information (e.g., version)."
+    },
+    "searchFailed": "रूम खोजने में विफल। कृपया पुनः प्रयास करें।",
+    "@searchFailed": {
+        "description": "Error message when searching for rooms fails."
+    },
     "updateAvailable": "अपडेट उपलब्ध है",
+    "@updateAvailable": {
+        "description": "Title indicating that a new version of the app is available."
+    },
     "newVersionAvailable": "एक नया वर्शन उपलब्ध है!",
+    "@newVersionAvailable": {
+        "description": "Message informing the user about an available update."
+    },
     "upToDate": "आपका ऐप लेटेस्ट है",
+    "@upToDate": {
+        "description": "Title indicating the application is on the latest version."
+    },
     "latestVersion": "आप रेज़ोनेट का लेटेस्ट वर्शन इस्तेमाल कर रहे हैं",
+    "@latestVersion": {
+        "description": "Message confirming the user has the latest version of the app."
+    },
     "profileCreatedSuccessfully": "प्रोफ़ाइल सफलतापूर्वक बनाई गई",
+    "@profileCreatedSuccessfully": {
+        "description": "Success message after a user's profile is created."
+    },
     "invalidScheduledDateTime": "अमान्य तारीख और समय",
+    "@invalidScheduledDateTime": {
+        "description": "Error message for an invalid date-time format."
+    },
     "scheduledDateTimePast": "शेड्यूल तारीख व समय पहले का नहीं हो सकता",
+    "@scheduledDateTimePast": {
+        "description": "Error message when the user selects a past date-time for a scheduled event."
+    },
     "joinRoom": "रूम में शामिल हों",
-    "loadingDialogName": "लोडिंग डायलॉग",
+    "@joinRoom": {
+        "description": "Button text to join an audio room."
+    },
     "unknownUser": "अज्ञात यूज़र",
+    "@unknownUser": {
+        "description": "Placeholder text for a user whose name is not available."
+    },
     "canceled": "रद्द किया गया",
+    "@canceled": {
+        "description": "A status label indicating that an action was canceled."
+    },
     "english": "en",
+    "@english": {
+        "description": "The language code for English."
+    },
     "emailVerificationRequired": "ईमेल वेरिफिकेशन ज़रूरी है",
+    "@emailVerificationRequired": {
+        "description": "A title or message indicating that email verification is needed to proceed."
+    },
     "verify": "वेरिफ़ाई करें",
+    "@verify": {
+        "description": "Button text to initiate a verification process."
+    },
     "audioRoom": "ऑडियो रूम",
+    "@audioRoom": {
+        "description": "Generic title for an audio room."
+    },
     "toRoomAction": "रूम को {action} करने के लिए",
     "@toRoomAction": {
-        "description": "Room action message",
+        "description": "A dynamic message for confirming an action on a room, like deleting or leaving.",
         "placeholders": {
             "action": {
                 "type": "String",
@@ -208,49 +777,192 @@
         }
     },
     "mailSentMessage": "मेल भेज दी गई है",
+    "@mailSentMessage": {
+        "description": "A confirmation message indicating an email has been sent."
+    },
     "disconnected": "कनेक्शन टूट गया",
+    "@disconnected": {
+        "description": "A status label indicating a loss of connection."
+    },
     "micOn": "माइक",
+    "@micOn": {
+        "description": "Accessibility label for the microphone button when it is on."
+    },
     "speakerOn": "स्पीकर",
+    "@speakerOn": {
+        "description": "Accessibility label for the speakerphone button when it is on."
+    },
     "endChat": "चैट समाप्त करें",
+    "@endChat": {
+        "description": "Accessibility label for the end chat/call button."
+    },
     "monthJan": "जनवरी",
+    "@monthJan": {
+        "description": "Abbreviation for January."
+    },
     "monthFeb": "फरवरी",
+    "@monthFeb": {
+        "description": "Abbreviation for February."
+    },
     "monthMar": "मार्च",
+    "@monthMar": {
+        "description": "Full name for March."
+    },
     "monthApr": "अप्रैल",
+    "@monthApr": {
+        "description": "Full name for April."
+    },
     "monthMay": "मई",
+    "@monthMay": {
+        "description": "Full name for May."
+    },
     "monthJun": "जून",
+    "@monthJun": {
+        "description": "Full name for June."
+    },
     "monthJul": "जुलाई",
+    "@monthJul": {
+        "description": "Full name for July."
+    },
     "monthAug": "अगस्त",
+    "@monthAug": {
+        "description": "Abbreviation for August."
+    },
     "monthSep": "सितंबर",
+    "@monthSep": {
+        "description": "Abbreviation for September."
+    },
     "monthOct": "अक्टूबर",
+    "@monthOct": {
+        "description": "Abbreviation for October."
+    },
     "monthNov": "नवंबर",
+    "@monthNov": {
+        "description": "Abbreviation for November."
+    },
     "monthDec": "दिसंबर",
+    "@monthDec": {
+        "description": "Abbreviation for December."
+    },
     "register": "रजिस्टर करें",
+    "@register": {
+        "description": "Button text to register a new account."
+    },
     "newToResonate": "रेज़ोनेट पर नए हैं? ",
+    "@newToResonate": {
+        "description": "Text preceding the 'Create new account' link on the login screen."
+    },
     "alreadyHaveAccount": "पहले से अकाउंट है? ",
+    "@alreadyHaveAccount": {
+        "description": "Text preceding the 'Login' link on the sign-up screen."
+    },
     "checking": "जाँच हो रही है...",
+    "@checking": {
+        "description": "A temporary status message indicating a check is in progress."
+    },
     "forgotPasswordMessage": "पासवर्ड रीसेट करने के लिए अपना रजिस्टर्ड ईमेल दर्ज करें।",
+    "@forgotPasswordMessage": {
+        "description": "Instructional text on the forgot password screen."
+    },
     "usernameUnavailable": "यूज़रनेम उपलब्ध नहीं है!",
+    "@usernameUnavailable": {
+        "description": "Title for the error when a chosen username is taken."
+    },
     "usernameInvalidOrTaken": "यह यूज़रनेम अमान्य है या पहले से लिया जा चुका है।",
+    "@usernameInvalidOrTaken": {
+        "description": "Error message explaining why a username cannot be used."
+    },
     "otpResentMessage": "कृपया अपनी ईमेल जांचें, नया OTP भेजा गया है।",
+    "@otpResentMessage": {
+        "description": "Message informing the user to check their email for a new OTP."
+    },
     "connectionError": "कनेक्शन में समस्या है। कृपया इंटरनेट चेक करें और दोबारा प्रयास करें।",
+    "@connectionError": {
+        "description": "Generic error message for network connection issues."
+    },
     "seconds": "सेकंड",
+    "@seconds": {
+        "description": "The word 'seconds', often used after a countdown number."
+    },
     "unsavedChangesWarning": "यदि आप बिना सेव किए आगे बढ़ते हैं, तो आपके सभी बदलाव खो जाएंगे।",
+    "@unsavedChangesWarning": {
+        "description": "A warning message shown when a user tries to leave a screen with unsaved changes."
+    },
     "deleteAccountPermanent": "यह प्रक्रिया आपके अकाउंट को हमेशा के लिए डिलीट कर देगी। आपका यूज़रनेम, ईमेल और सारा डेटा हटा दिया जाएगा। यह वापस नहीं लिया जा सकता।",
+    "@deleteAccountPermanent": {
+        "description": "A detailed warning message explaining the consequences of deleting an account."
+    },
     "giveGreatName": "एक अच्छा नाम सोचें...",
+    "@giveGreatName": {
+        "description": "Placeholder text for a name input field, encouraging a creative name."
+    },
     "joinCommunityDescription": "कम्युनिटी से जुड़कर आप सवाल पूछ सकते हैं, नए फीचर्स का सुझाव दे सकते हैं, और अपने अनुभव साझा कर सकते हैं।",
+    "@joinCommunityDescription": {
+        "description": "A description of the benefits of joining the community."
+    },
     "resonateDescription": "रेज़ोनेट एक सोशल मीडिया प्लेटफॉर्म है जहाँ हर आवाज़ की कद्र की जाती है। अपने विचार, कहानियाँ और अनुभव साझा करें। ऑडियो जर्नी अभी शुरू करें और उन टॉपिक्स में हिस्सा लें जो आपसे जुड़ते हैं।",
+    "@resonateDescription": {
+        "description": "A short, user-facing description of the Resonate application."
+    },
     "resonateFullDescription": "रेज़ोनेट एक क्रांतिकारी वॉयस-बेस्ड सोशल मीडिया प्लेटफॉर्म है जहाँ हर आवाज़ मायने रखती है।\nरियल-टाइम ऑडियो बातचीत में भाग लें, और अपने जैसे विचारों वाले लोगों से जुड़ें। हमारा प्लेटफॉर्म आपको देता है:\n- लाइव ऑडियो रूम्स\n- वॉयस के ज़रिए सोशल नेटवर्किंग\n- कम्युनिटी-ड्रिवन कंटेंट मॉडरेशन\n- क्रॉस-प्लेटफॉर्म सपोर्ट\n- एन्ड-टू-एन्ड एन्क्रिप्टेड प्राइवेट चैट्स\n\nयह ऐप AOSSIE ओपन-सोर्स कम्युनिटी द्वारा बनाया गया है, जो आपकी प्राइवेसी और पारदर्शी विकास को प्राथमिकता देती है।",
+    "@resonateFullDescription": {
+        "description": "A comprehensive, detailed description of the Resonate application, its features, and its mission."
+    },
     "stable": "स्थिर",
-    "congratulationsEmailVerified": "बधाई हो! आपका ईमेल वेरिफाई हो गया है",
-    "otpMismatchError": "OTP मेल नहीं खा रहा, कृपया फिर से प्रयास करें",
+    "@stable": {
+        "description": "A label indicating a stable, non-beta version of the app."
+    },
     "usernameCharacterLimit": "यूज़रनेम में कम से कम 6 अक्षर होने चाहिए।",
+    "@usernameCharacterLimit": {
+        "description": "Error message when a chosen username is too short."
+    },
     "submit": "सबमिट करें",
+    "@submit": {
+        "description": "Generic button text for submitting a form."
+    },
     "anonymous": "गुमनाम",
-    "resonate": "रेज़ोनेट",
+    "@anonymous": {
+        "description": "Label for an anonymous user or identity."
+    },
     "noSearchResults": "कोई रिज़ल्ट नहीं मिला",
+    "@noSearchResults": {
+        "description": "Message displayed when a search returns no results."
+    },
+    "searchRooms": "रूम खोजें...",
+    "@searchRooms": {
+        "description": "Placeholder text for room search input field."
+    },
+    "searchingRooms": "रूम खोजे जा रहे हैं...",
+    "@searchingRooms": {
+        "description": "Loading message shown while searching for rooms."
+    },
+    "clearSearch": "खोज साफ़ करें",
+    "@clearSearch": {
+        "description": "Text for button to clear search results."
+    },
+    "searchError": "खोज त्रुटि",
+    "@searchError": {
+        "description": "Title for search error messages."
+    },
+    "searchRoomsError": "कमरों की खोज असफल हुई। कृपया दोबारा कोशिश करें।",
+    "@searchRoomsError": {
+        "description": "Error message when room search fails."
+    },
+    "searchUpcomingRoomsError": "आगामी कमरों की खोज असफल हुई। कृपया दोबारा कोशिश करें।",
+    "@searchUpcomingRoomsError": {
+        "description": "Error message when upcoming room search fails."
+    },
+    "search": "खोजें",
+    "@search": {
+        "description": "Tooltip text for search button."
+    },
+    "clear": "साफ़ करें",
+    "@clear": {
+        "description": "Tooltip text for clear button."
+    },
     "shareRoomMessage": "🚀 इस शानदार रूम को देखें: {roomName}!\n\n📖 विवरण: {description}\n👥 अभी {participants} लोग जुड़ चुके हैं!",
     "@shareRoomMessage": {
-        "description": "Message to share room information",
+        "description": "The default message template used when sharing a room.",
         "placeholders": {
             "roomName": {
                 "type": "String",
@@ -268,7 +980,7 @@
     },
     "participantsCount": "{count} प्रतिभागी",
     "@participantsCount": {
-        "description": "Number of participants in a room",
+        "description": "Displays the number of participants in a room.",
         "placeholders": {
             "count": {
                 "type": "int",
@@ -277,23 +989,68 @@
         }
     },
     "join": "शामिल हों",
+    "@join": {
+        "description": "Generic button text to join an activity or group."
+    },
     "invalidTags": "अमान्य टैग:",
+    "@invalidTags": {
+        "description": "Error message prefix for an invalid tag."
+    },
     "cropImage": "इमेज क्रॉप करें",
+    "@cropImage": {
+        "description": "Title or button text for the image cropping tool."
+    },
     "profileSavedSuccessfully": "प्रोफ़ाइल सेव हो गई",
+    "@profileSavedSuccessfully": {
+        "description": "Short success message indicating profile changes have been saved."
+    },
     "profileUpdatedSuccessfully": "आपके सभी बदलाव सफलतापूर्वक सेव हो गए हैं।",
+    "@profileUpdatedSuccessfully": {
+        "description": "Detailed success message confirming profile update."
+    },
     "profileUpToDate": "आपकी प्रोफ़ाइल पूरी तरह अपडेट है",
+    "@profileUpToDate": {
+        "description": "Title for the message when there are no changes to save on the profile."
+    },
     "noChangesToSave": "कोई नया बदलाव नहीं है, सेव करने की ज़रूरत नहीं।",
+    "@noChangesToSave": {
+        "description": "Message displayed when the user tries to save their profile without making any changes."
+    },
     "connectionFailed": "कनेक्शन फेल हो गया",
+    "@connectionFailed": {
+        "description": "Generic title for connection-related errors."
+    },
     "unableToJoinRoom": "रूम से कनेक्ट नहीं हो सका। कृपया नेटवर्क चेक करें और फिर से कोशिश करें।",
+    "@unableToJoinRoom": {
+        "description": "Error message when a user fails to join a room due to connection issues."
+    },
     "connectionLost": "कनेक्शन टूट गया",
+    "@connectionLost": {
+        "description": "Title indicating that the connection to a service was lost."
+    },
     "unableToReconnect": "रूम से दोबारा कनेक्ट नहीं हो सका। कृपया फिर से जुड़ने का प्रयास करें।",
+    "@unableToReconnect": {
+        "description": "Error message when the app fails to reconnect the user to a room."
+    },
     "invalidFormat": "अमान्य फ़ॉर्मेट!",
+    "@invalidFormat": {
+        "description": "Generic error message for data with an incorrect format."
+    },
     "usernameAlphanumeric": "यूज़रनेम केवल अक्षर और अंक होने चाहिए, कोई स्पेशल कैरेक्टर नहीं।",
+    "@usernameAlphanumeric": {
+        "description": "Error message detailing the character requirements for a valid username."
+    },
     "userProfileCreatedSuccessfully": "आपकी यूज़र प्रोफ़ाइल सफलतापूर्वक बनाई गई है।",
+    "@userProfileCreatedSuccessfully": {
+        "description": "Success message after a user completes their profile setup."
+    },
     "emailVerificationMessage": "आगे बढ़ने के लिए कृपया अपना ईमेल वेरिफाई करें।",
+    "@emailVerificationMessage": {
+        "description": "An instructional message prompting the user to verify their email."
+    },
     "addNewChaptersToStory": "{storyName} में नए चैप्टर्स जोड़ें",
     "@addNewChaptersToStory": {
-        "description": "Title for adding new chapters to a story",
+        "description": "Title for the screen where new chapters are added to an existing story.",
         "placeholders": {
             "storyName": {
                 "type": "String",
@@ -302,18 +1059,44 @@
         }
     },
     "currentChapters": "मौजूदा चैप्टर्स",
-    "newChapters": "नए चैप्टर्स",
+    "@currentChapters": {
+        "description": "Header for the list of existing chapters in a story."
+    },
     "sourceCodeOnGitHub": "GitHub पर सोर्स कोड",
+    "@sourceCodeOnGitHub": {
+        "description": "Link text to the project's source code on GitHub."
+    },
     "createAChapter": "नया चैप्टर बनाएं",
+    "@createAChapter": {
+        "description": "Title for the screen where a new chapter is created."
+    },
     "chapterTitle": "चैप्टर का टाइटल *",
+    "@chapterTitle": {
+        "description": "Label for the chapter title input field, indicating it is required."
+    },
     "aboutRequired": "कहानी का परिचय *",
+    "@aboutRequired": {
+        "description": "Label for the 'About' or description input field, indicating it is required."
+    },
     "changeCoverImage": "कवर इमेज बदलें",
+    "@changeCoverImage": {
+        "description": "Button text to change the cover image of a story or chapter."
+    },
     "uploadAudioFile": "ऑडियो फाइल अपलोड करें",
+    "@uploadAudioFile": {
+        "description": "Button text to upload an audio file."
+    },
     "uploadLyricsFile": "लिरिक्स फाइल अपलोड करें",
+    "@uploadLyricsFile": {
+        "description": "Button text to upload a lyrics file."
+    },
     "createChapter": "चैप्टर बनाएं",
+    "@createChapter": {
+        "description": "Button text to finalize and create a new chapter."
+    },
     "audioFileSelected": "ऑडियो फाइल चुनी गई: {fileName}",
     "@audioFileSelected": {
-        "description": "Message when audio file is selected",
+        "description": "Message shown after an audio file has been selected for upload.",
         "placeholders": {
             "fileName": {
                 "type": "String",
@@ -323,7 +1106,7 @@
     },
     "lyricsFileSelected": "लिरिक्स फाइल चुनी गई: {fileName}",
     "@lyricsFileSelected": {
-        "description": "Message when lyrics file is selected",
+        "description": "Message shown after a lyrics file has been selected for upload.",
         "placeholders": {
             "fileName": {
                 "type": "String",
@@ -332,35 +1115,116 @@
         }
     },
     "fillAllRequiredFields": "कृपया सभी जरूरी फ़ील्ड भरें और अपनी ऑडियो व लिरिक्स फाइल अपलोड करें",
+    "@fillAllRequiredFields": {
+        "description": "Error message when required fields or files are missing from a form."
+    },
     "scheduled": "शेड्यूल्ड",
+    "@scheduled": {
+        "description": "A status label indicating an event is scheduled for the future."
+    },
     "ok": "ठीक है",
+    "@ok": {
+        "description": "Generic confirmation button text, often for closing a dialog."
+    },
     "roomDescriptionOptional": "रूम का विवरण (वैकल्पिक)",
+    "@roomDescriptionOptional": {
+        "description": "Label for the room description input field, indicating it is not required."
+    },
     "deleteAccount": "अकाउंट हटाएं",
+    "@deleteAccount": {
+        "description": "Button text to initiate the account deletion process."
+    },
     "createYourStory": "अपनी कहानी बनाएं",
+    "@createYourStory": {
+        "description": "Title for the screen where a new story is created."
+    },
     "titleRequired": "टाइटल *",
+    "@titleRequired": {
+        "description": "Label for the title input field, indicating it is required."
+    },
     "category": "कैटेगरी *",
+    "@category": {
+        "description": "Label for the category selection, indicating it is required."
+    },
     "addChapter": "चैप्टर जोड़ें",
+    "@addChapter": {
+        "description": "Button text to add a chapter to a story."
+    },
     "createStory": "कहानी बनाएं",
+    "@createStory": {
+        "description": "Button text to finalize and create a new story."
+    },
     "fillAllRequiredFieldsAndChapter": "कृपया सभी ज़रूरी फ़ील्ड भरें, कम से कम एक चैप्टर जोड़ें और कवर इमेज चुनें।",
+    "@fillAllRequiredFieldsAndChapter": {
+        "description": "Error message for the story creation form when requirements are not met."
+    },
     "toConfirmType": "पुष्टि करने के लिए टाइप करें",
+    "@toConfirmType": {
+        "description": "Instructional text in a confirmation dialog, preceding the text to be typed."
+    },
     "inTheBoxBelow": "नीचे दिए गए बॉक्स में",
+    "@inTheBoxBelow": {
+        "description": "Instructional text in a confirmation dialog, following the text to be typed."
+    },
     "iUnderstandDeleteMyAccount": "मैं समझता/समझती हूँ, मेरा अकाउंट डिलीट करें",
+    "@iUnderstandDeleteMyAccount": {
+        "description": "The specific phrase a user must type to confirm account deletion."
+    },
     "whatDoYouWantToListenTo": "आप क्या सुनना चाहते हैं?",
+    "@whatDoYouWantToListenTo": {
+        "description": "A prompt on the main screen, encouraging user engagement."
+    },
     "categories": "श्रेणियाँ",
+    "@categories": {
+        "description": "Header for the list of categories."
+    },
     "stories": "कहानियाँ",
+    "@stories": {
+        "description": "Header for the list of stories."
+    },
     "someSuggestions": "कुछ सुझाव",
+    "@someSuggestions": {
+        "description": "Header for a list of suggested content."
+    },
     "getStarted": "शुरू करें",
+    "@getStarted": {
+        "description": "Button text on an onboarding screen to begin using the app."
+    },
     "skip": "स्किप करें",
+    "@skip": {
+        "description": "Button text to skip an optional step, like onboarding."
+    },
     "welcomeToResonate": "रेज़ोनेट में आपका स्वागत है",
+    "@welcomeToResonate": {
+        "description": "Onboarding screen title."
+    },
     "exploreDiverseConversations": "विविध बातचीत का अनुभव लें",
+    "@exploreDiverseConversations": {
+        "description": "Feature highlight on an onboarding screen."
+    },
     "yourVoiceMatters": "आपकी आवाज़ मायने रखती है",
+    "@yourVoiceMatters": {
+        "description": "Feature highlight on an onboarding screen."
+    },
     "joinConversationExploreRooms": "बातचीत में शामिल हों! रूम्स एक्सप्लोर करें, दोस्तों से जुड़ें और अपनी आवाज़ दुनिया तक पहुँचाएं।",
+    "@joinConversationExploreRooms": {
+        "description": "Descriptive text on an onboarding screen."
+    },
     "diveIntoDiverseDiscussions": "विभिन्न चर्चाओं में शामिल हों।\nऐसे रूम्स खोजें जो आपसे जुड़ते हों और कम्युनिटी का हिस्सा बनें।",
+    "@diveIntoDiverseDiscussions": {
+        "description": "Descriptive text on an onboarding screen."
+    },
     "atResonateEveryVoiceValued": "रेज़ोनेट में हर आवाज़ की अहमियत है। अपने विचार, कहानियाँ और अनुभव साझा करें। अपनी ऑडियो जर्नी अभी शुरू करें।",
+    "@atResonateEveryVoiceValued": {
+        "description": "Descriptive text on an onboarding screen."
+    },
     "notifications": "नोटिफिकेशन",
+    "@notifications": {
+        "description": "Title for the notifications screen."
+    },
     "taggedYouInUpcomingRoom": "{username} ने आपको एक अपकमिंग रूम में टैग किया: {subject}",
     "@taggedYouInUpcomingRoom": {
-        "description": "Notification message when tagged in upcoming room",
+        "description": "Notification message when tagged in an upcoming room.",
         "placeholders": {
             "username": {
                 "type": "String",
@@ -374,7 +1238,7 @@
     },
     "taggedYouInRoom": "{username} ने आपको एक रूम में टैग किया: {subject}",
     "@taggedYouInRoom": {
-        "description": "Notification message when tagged in room",
+        "description": "Notification message when tagged in a live room.",
         "placeholders": {
             "username": {
                 "type": "String",
@@ -388,7 +1252,7 @@
     },
     "likedYourStory": "{username} ने आपकी कहानी को पसंद किया: {subject}",
     "@likedYourStory": {
-        "description": "Notification message when someone likes your story",
+        "description": "Notification message when someone likes your story.",
         "placeholders": {
             "username": {
                 "type": "String",
@@ -402,7 +1266,7 @@
     },
     "subscribedToYourRoom": "{username} ने आपके रूम को सब्सक्राइब किया: {subject}",
     "@subscribedToYourRoom": {
-        "description": "Notification message when someone subscribes to your room",
+        "description": "Notification message when someone subscribes to your room.",
         "placeholders": {
             "username": {
                 "type": "String",
@@ -416,7 +1280,7 @@
     },
     "startedFollowingYou": "{username} ने आपको फॉलो करना शुरू किया",
     "@startedFollowingYou": {
-        "description": "Notification message when someone starts following you",
+        "description": "Notification message when someone starts following you.",
         "placeholders": {
             "username": {
                 "type": "String",
@@ -425,21 +1289,60 @@
         }
     },
     "youHaveNewNotification": "आपके लिए एक नया नोटिफिकेशन है",
+    "@youHaveNewNotification": {
+        "description": "Generic title for a new notification."
+    },
     "hangOnGoodThingsTakeTime": "रुकिए — अच्छी चीज़ों में समय लगता है 🔍",
+    "@hangOnGoodThingsTakeTime": {
+        "description": "A friendly message displayed during a long loading process."
+    },
     "resonateOpenSourceProject": "रेज़ोनेट एक ओपन-सोर्स प्रोजेक्ट है जिसे AOSSIE बनाए रखता है। योगदान देने के लिए हमारा GitHub देखें।",
+    "@resonateOpenSourceProject": {
+        "description": "Informational text about the open-source nature of the project."
+    },
     "mute": "म्यूट करें",
+    "@mute": {
+        "description": "Button text to mute the microphone."
+    },
     "speakerLabel": "स्पीकर",
+    "@speakerLabel": {
+        "description": "Label for the speakerphone toggle."
+    },
     "end": "समाप्त करें",
+    "@end": {
+        "description": "Button text to end a call or session."
+    },
     "saveChanges": "बदलाव सेव करें",
+    "@saveChanges": {
+        "description": "Button text to save modified settings or profile information."
+    },
     "discard": "रद्द करें",
+    "@discard": {
+        "description": "Button text to discard changes."
+    },
     "save": "सेव करें",
+    "@save": {
+        "description": "Button text to save changes."
+    },
     "changeProfilePicture": "प्रोफ़ाइल पिक्चर बदलें",
+    "@changeProfilePicture": {
+        "description": "Button text to open the profile picture selection options."
+    },
     "camera": "कैमरा",
+    "@camera": {
+        "description": "Option to use the camera to take a picture."
+    },
     "gallery": "गैलरी",
+    "@gallery": {
+        "description": "Option to choose a picture from the gallery."
+    },
     "remove": "हटाएं",
+    "@remove": {
+        "description": "Button text to remove an item, like a profile picture."
+    },
     "created": "बनाई गई: {date}",
     "@created": {
-        "description": "Story creation date",
+        "description": "Displays the creation date of a story or content.",
         "placeholders": {
             "date": {
                 "type": "String",
@@ -447,12 +1350,17 @@
             }
         }
     },
-    "aboutStory": "कहानी के बारे में",
     "chapters": "चैप्टर",
+    "@chapters": {
+        "description": "Header for the list of chapters in a story."
+    },
     "deleteStory": "कहानी हटाएं",
+    "@deleteStory": {
+        "description": "Button text to delete a story."
+    },
     "createdBy": "{creatorName} द्वारा बनाई गई",
     "@createdBy": {
-        "description": "Story creator information",
+        "description": "Displays the name of the content creator.",
         "placeholders": {
             "creatorName": {
                 "type": "String",
@@ -461,13 +1369,20 @@
         }
     },
     "start": "शुरू करें",
+    "@start": {
+        "description": "Button text to start an activity or session."
+    },
     "unsubscribe": "सब्सक्रिप्शन हटाएं",
+    "@unsubscribe": {
+        "description": "Button text to unsubscribe from a room or notification."
+    },
     "subscribe": "सब्सक्राइब करें",
-    "confirmPassword": "पासवर्ड की पुष्टि करें",
-    "passwordsNotMatch": "पासवर्ड मेल नहीं खा रहे हैं",
+    "@subscribe": {
+        "description": "Button text to subscribe to a room or notification."
+    },
     "storyCategory": "{category, select, drama{नाटक} comedy{हास्य} horror{डरावनी} romance{प्रेम कथा} thriller{रोमांच} spiritual{आध्यात्मिक} other{अन्य}}",
     "@storyCategory": {
-        "description": "Choose the category for Story",
+        "description": "Selects the appropriate category name for a story based on a key.",
         "placeholders": {
             "category": {
                 "type": "String",
@@ -477,17 +1392,17 @@
     },
     "chooseTheme": "{category, select, classicTheme{क्लासिक} timeTheme{टाइम} vintageTheme{विंटेज} amberTheme{अंबर} forestTheme{फॉरेस्ट} creamTheme{क्रीम} other{अन्य}}",
     "@chooseTheme": {
-        "description": "Choose the theme for the app",
+        "description": "Selects the appropriate theme name based on a key.",
         "placeholders": {
             "category": {
                 "type": "String",
-                "example": "Classic"
+                "example": "classic"
             }
         }
     },
     "minutesAgo": "{count, plural, =1{1 मिनट पहले} other{{count} मिनट पहले}}",
     "@minutesAgo": {
-        "description": "Time format for minutes ago",
+        "description": "Displays time in a relative format for minutes.",
         "placeholders": {
             "count": {
                 "type": "int",
@@ -497,7 +1412,7 @@
     },
     "hoursAgo": "{count, plural, =1{1 घंटा पहले} other{{count} घंटे पहले}}",
     "@hoursAgo": {
-        "description": "Time format for hours ago",
+        "description": "Displays time in a relative format for hours.",
         "placeholders": {
             "count": {
                 "type": "int",
@@ -507,7 +1422,7 @@
     },
     "daysAgo": "{count, plural, =1{1 दिन पहले} other{{count} दिन पहले}}",
     "@daysAgo": {
-        "description": "Time format for days ago",
+        "description": "Displays time in a relative format for days.",
         "placeholders": {
             "count": {
                 "type": "int",
@@ -516,47 +1431,64 @@
         }
     },
     "by": "प्रस्तुतकर्ता:",
+    "@by": {
+        "description": "A preposition, typically used between a content title and the author's name."
+    },
     "likes": "लाइक्स",
+    "@likes": {
+        "description": "Label for the number of likes."
+    },
     "lengthMinutes": "मिनट",
+    "@lengthMinutes": {
+        "description": "Abbreviation for 'minutes', used to display audio length."
+    },
     "requiredField": "आवश्यक फील्ड",
-    "clickPictureUsingCamera": "कैमरा से फोटो लें",
-    "pickImageFromGallery": "गैलरी से फोटो चुनें",
+    "@requiredField": {
+        "description": "Error message for a mandatory field that was left empty."
+    },
     "onlineUsers": "ऑनलाइन यूज़र्स",
+    "@onlineUsers": {
+        "description": "Header for the list of users who are currently online."
+    },
     "noOnlineUsers": "कोई यूज़र अभी ऑनलाइन नहीं है",
+    "@noOnlineUsers": {
+        "description": "Message displayed when no users are online."
+    },
     "chooseUser": "चैट करने के लिए यूज़र चुनें",
+    "@chooseUser": {
+        "description": "Instructional text to select a user to start a chat."
+    },
     "quickMatch": "झटपट मैच",
+    "@quickMatch": {
+        "description": "Button text for a feature that quickly matches the user with a random chat partner."
+    },
     "story": "कहानी",
+    "@story": {
+        "description": "Label for a story."
+    },
     "user": "यूज़र",
+    "@user": {
+        "description": "Label for a user."
+    },
     "following": "फॉलो कर रहे हैं",
+    "@following": {
+        "description": "Label for the list of users that the current user is following."
+    },
     "followers": "फॉलोअर्स",
-    "checkForUpdates": "अपडेट चेक करें",
-    "updateNow": "अभी अपडेट करें",
-    "updateLater": "बाद में",
-    "updateSuccessful": "अपडेट सफल",
-    "updateSuccessfulMessage": "रेज़ोनेट सफलतापूर्वक अपडेट हो गया है!",
-    "updateCancelled": "अपडेट रद्द किया गया",
-    "updateCancelledMessage": "अपडेट यूज़र द्वारा रद्द किया गया",
-    "updateFailed": "अपडेट फेल",
-    "updateFailedMessage": "अपडेट फेल हो गया। कृपया Play Store से मैन्युअली अपडेट करने का प्रयास करें।",
-    "updateError": "अपडेट एरर",
-    "updateErrorMessage": "अपडेट करने में कोई समस्या आई। कृपया फिर से प्रयास करें।",
-    "platformNotSupported": "प्लेटफॉर्म सपोर्टेड नहीं",
-    "platformNotSupportedMessage": "अपडेट चेक करना केवल Android डिवाइस पर उपलब्ध है",
-    "updateCheckFailed": "अपडेट चेक फेल",
-    "updateCheckFailedMessage": "अपडेट चेक नहीं हो सका। कृपया बाद में प्रयास करें।",
-    "upToDateTitle": "आप अप टू डेट हैं!",
-    "upToDateMessage": "आप रेज़ोनेट का लेटेस्ट वर्शन इस्तेमाल कर रहे हैं",
-    "updateAvailableTitle": "अपडेट उपलब्ध है!",
-    "updateAvailableMessage": "रेज़ोनेट का नया वर्शन Play Store पर उपलब्ध है",
-    "updateFeaturesImprovement": "नवीनतम सुविधाएं और सुधार प्राप्त करें!",
+    "@followers": {
+        "description": "Label for the list of users who are following the current user."
+    },
     "friendRequests": "फ्रेंड रिक्वेस्ट",
-    "requested": "अनुरोध किया है",
-    "friends": "मित्र",
-    "addFriend": "मित्र जोड़ें",
+    "@friendRequests": {
+        "description": "Header for the list of incoming friend requests."
+    },
     "friendRequestSent": "मित्रता अनुरोध भेजा गया",
+    "@friendRequestSent": {
+        "description": "Title for the confirmation message after sending a friend request."
+    },
     "friendRequestSentTo": "आपका मित्रता अनुरोध {username} को भेजा गया है।",
     "@friendRequestSentTo": {
-        "description": "Message when a friend request is sent to a user",
+        "description": "Confirmation message after sending a friend request to a specific user.",
         "placeholders": {
             "username": {
                 "type": "String",
@@ -565,9 +1497,12 @@
         }
     },
     "friendRequestCancelled": "मित्रता अनुरोध रद्द कर दिया गया",
+    "@friendRequestCancelled": {
+        "description": "Title for the confirmation message after cancelling a friend request."
+    },
     "friendRequestCancelledTo": "{username} को आपका मित्रता अनुरोध रद्द कर दिया गया है।",
     "@friendRequestCancelledTo": {
-        "description": "Message when a friend request is cancelled",
+        "description": "Confirmation message after cancelling a friend request to a specific user.",
         "placeholders": {
             "username": {
                 "type": "String",
@@ -575,10 +1510,25 @@
             }
         }
     },
+    "requested": "अनुरोध किया है",
+    "@requested": {
+        "description": "A status label on a button indicating a friend request has been sent."
+    },
+    "friends": "मित्र",
+    "@friends": {
+        "description": "A status label or header for the list of friends."
+    },
+    "addFriend": "मित्र जोड़ें",
+    "@addFriend": {
+        "description": "Button text to send a friend request."
+    },
     "friendRequestAccepted": "मित्रता अनुरोध स्वीकार कर लिया गया",
+    "@friendRequestAccepted": {
+        "description": "Title for the confirmation message after accepting a friend request."
+    },
     "friendRequestAcceptedTo": "आपने {username} के मित्रता अनुरोध को स्वीकार कर लिया है।",
     "@friendRequestAcceptedTo": {
-        "description": "Message when a friend request is accepted",
+        "description": "Confirmation message after accepting a friend request from a specific user.",
         "placeholders": {
             "username": {
                 "type": "String",
@@ -587,9 +1537,12 @@
         }
     },
     "friendRequestDeclined": "मित्रता अनुरोध अस्वीकार कर दिया गया",
+    "@friendRequestDeclined": {
+        "description": "Title for the confirmation message after declining a friend request."
+    },
     "friendRequestDeclinedTo": "आपने {username} के मित्रता अनुरोध को अस्वीकार कर दिया है।",
     "@friendRequestDeclinedTo": {
-        "description": "Message when a friend request is declined",
+        "description": "Confirmation message after declining a friend request from a specific user.",
         "placeholders": {
             "username": {
                 "type": "String",
@@ -598,10 +1551,16 @@
         }
     },
     "accept": "स्वीकार करें",
+    "@accept": {
+        "description": "Button text to accept a request or invitation."
+    },
     "callDeclined": "कॉल अस्वीकार कर दिया गया",
+    "@callDeclined": {
+        "description": "Title for the message when a call is declined."
+    },
     "callDeclinedTo": "{username} ने आपकी कॉल को अस्वीकार कर दिया है।",
     "@callDeclinedTo": {
-        "description": "Message when a call is declined",
+        "description": "Message indicating that a specific user declined a call.",
         "placeholders": {
             "username": {
                 "type": "String",
@@ -610,23 +1569,205 @@
         }
     },
     "checkForUpdates": "अपडेट चेक करें",
+    "@checkForUpdates": {
+        "description": "Button text to manually check for application updates."
+    },
     "updateNow": "अभी अपडेट करें",
+    "@updateNow": {
+        "description": "Button text to start the update process."
+    },
     "updateLater": "बाद में",
+    "@updateLater": {
+        "description": "Button text to postpone an update."
+    },
     "updateSuccessful": "अपडेट सफल",
+    "@updateSuccessful": {
+        "description": "Title for the success message after an update."
+    },
     "updateSuccessfulMessage": "रेज़ोनेट सफलतापूर्वक अपडेट हो गया है!",
+    "@updateSuccessfulMessage": {
+        "description": "Success message confirming the application has been updated."
+    },
     "updateCancelled": "अपडेट रद्द किया गया",
+    "@updateCancelled": {
+        "description": "Title for the message when an update is cancelled."
+    },
     "updateCancelledMessage": "अपडेट यूज़र द्वारा रद्द किया गया",
+    "@updateCancelledMessage": {
+        "description": "Message indicating the user cancelled the update process."
+    },
     "updateFailed": "अपडेट फेल",
+    "@updateFailed": {
+        "description": "Title for the message when an update fails."
+    },
     "updateFailedMessage": "अपडेट फेल हो गया। कृपया Play Store से मैन्युअली अपडेट करने का प्रयास करें।",
+    "@updateFailedMessage": {
+        "description": "Error message when an in-app update fails, suggesting a manual update."
+    },
     "updateError": "अपडेट एरर",
+    "@updateError": {
+        "description": "Generic title for an update-related error."
+    },
     "updateErrorMessage": "अपडेट करने में कोई समस्या आई। कृपया फिर से प्रयास करें।",
+    "@updateErrorMessage": {
+        "description": "Generic error message for an update that failed due to an unknown error."
+    },
     "platformNotSupported": "प्लेटफॉर्म सपोर्टेड नहीं",
+    "@platformNotSupported": {
+        "description": "Title for an error when a feature is not supported on the current platform."
+    },
     "platformNotSupportedMessage": "अपडेट चेक करना केवल Android डिवाइस पर उपलब्ध है",
+    "@platformNotSupportedMessage": {
+        "description": "Message explaining that the in-app update feature is platform-specific."
+    },
     "updateCheckFailed": "अपडेट चेक फेल",
+    "@updateCheckFailed": {
+        "description": "Title for an error when the app fails to check for updates."
+    },
     "updateCheckFailedMessage": "अपडेट चेक नहीं हो सका। कृपया बाद में प्रयास करें।",
+    "@updateCheckFailedMessage": {
+        "description": "Error message when the check for updates process fails."
+    },
     "upToDateTitle": "आप अप टू डेट हैं!",
+    "@upToDateTitle": {
+        "description": "Title for the message when the app is already up to date."
+    },
     "upToDateMessage": "आप रेज़ोनेट का लेटेस्ट वर्शन इस्तेमाल कर रहे हैं",
+    "@upToDateMessage": {
+        "description": "Message confirming that no update is needed."
+    },
     "updateAvailableTitle": "अपडेट उपलब्ध है!",
+    "@updateAvailableTitle": {
+        "description": "Title for the dialog informing the user about a new update."
+    },
     "updateAvailableMessage": "रेज़ोनेट का नया वर्शन Play Store पर उपलब्ध है",
-    "updateFeaturesImprovement": "नवीनतम सुविधाएं और सुधार प्राप्त करें!"
+    "@updateAvailableMessage": {
+        "description": "Message prompting the user to update the app from the Play Store."
+    },
+    "updateFeaturesImprovement": "नवीनतम सुविधाएं और सुधार प्राप्त करें!",
+    "@updateFeaturesImprovement": {
+        "description": "A message highlighting the benefit of updating the application."
+    },
+    "hide": "छुपाएं",
+    "@hide": {
+        "description": "Button text to hide an item from view."
+    },
+    "removeRoom": "रूम छुपाएं",
+    "@removeRoom": {
+        "description": "Dialog title for hiding an upcoming room."
+    },
+    "removeRoomFromList": "सूची से छुपाएं",
+    "@removeRoomFromList": {
+        "description": "Tooltip text for the hide room button."
+    },
+    "removeRoomConfirmation": "क्या आप वाकई इस आने वाले रूम को अपनी सूची से छुपाना चाहते हैं?",
+    "@removeRoomConfirmation": {
+        "description": "Confirmation message asking if the user wants to hide an upcoming room from their list."
+    },
+    "failedToRemoveRoom": "रूम हटाने में विफल",
+    "@failedToRemoveRoom": {
+        "description": "Error message when unable to remove a room from the list"
+    },
+    "roomRemovedSuccessfully": "रूम आपकी सूची से सफलतापूर्वक हटा दिया गया",
+    "@roomRemovedSuccessfully": {
+        "description": "Success message when a room is successfully removed from the user's list"
+    },
+    "alert": "अलर्ट",
+    "@alert": {
+        "description": "Title for an alert dialog."
+    },
+    "removedFromRoom": "आपको कमरे से रिपोर्ट किया गया है या हटा दिया गया है",
+    "@removedFromRoom": {
+        "description": "Message shown when a user is removed or reported from a room."
+    },
+    "reportType": "{type, select, harassment{हिंसा / नफरत भरा भाषण} abuse{दुरुपयोग सामग्री / हिंसा} spam{स्पैम / धोखाधड़ी} impersonation{नकली खाते} illegal{गैरकानूनी गतिविधियाँ} selfharm{आत्म-हानि / आत्महत्या / मानसिक स्वास्थ्य} misuse{प्लेटफ़ॉर्म का दुरुपयोग} other{अन्य}}",
+    "@reportType": {
+        "description": "Selects the appropriate report type label based on a key.",
+        "placeholders": {
+            "type": {
+                "type": "String",
+                "example": "harassment"
+            }
+        }
+    },
+    "userBlockedFromResonate": "आपको कई उपयोगकर्ताओं द्वारा रिपोर्ट किया गया है और आपको रेज़ोनेट का उपयोग करने से ब्लॉक कर दिया गया है। यदि आपको लगता है कि यह गलती है, तो कृपया AOSSIE से संपर्क करें।",
+    "@userBlockedFromResonate": {
+        "description": "Message shown when a user is blocked from using Resonate."
+    },
+    "reportParticipant": "प्रतिभागी की रिपोर्ट करें",
+    "@reportParticipant": {
+        "description": "Label for the button to report a participant."
+    },
+    "selectReportType": "रिपोर्ट का प्रकार चुनें",
+    "@selectReportType": {
+        "description": "Prompt for the user to select a report type."
+    },
+    "reportSubmitted": "रिपोर्ट सफलतापूर्वक सबमिट की गई",
+    "@reportSubmitted": {
+        "description": "Message shown when a report is submitted successfully."
+    },
+    "reportFailed": "रिपोर्ट सबमिशन फेल",
+    "@reportFailed": {
+        "description": "Message shown when a report submission fails."
+    },
+    "additionalDetailsOptional": "अतिरिक्त विवरण (वैकल्पिक)",
+    "@additionalDetailsOptional": {
+        "description": "Label for an optional input field for additional details in a report."
+    },
+    "submitReport": "रिपोर्ट सबमिट करें",
+    "@submitReport": {
+        "description": "Button text to submit a report."
+    },
+    "actionBlocked": "कार्रवाई अवरुद्ध",
+    "@actionBlocked": {
+        "description": "Title for a message indicating that a user action is blocked."
+    },
+    "cannotStopRecording": "आप रिकॉर्डिंग को मैन्युअल रूप से रोक नहीं सकते, रिकॉर्डिंग तब रोकी जाएगी जब कमरा बंद होगा।",
+    "@cannotStopRecording": {
+        "description": "Message explaining why a user cannot stop a recording manually."
+    },
+    "liveChapter": "लाइव चैप्टर",
+    "@liveChapter": {
+        "description": "Label indicating that a chapter is currently live."
+    },
+    "viewOrEditLyrics": "गीत देखें या संपादित करें",
+    "@viewOrEditLyrics": {
+        "description": "Button text to view or edit the lyrics of a chapter."
+    },
+    "close": "बंद करें",
+    "@close": {
+        "description": "Label for the button to close a dialog."
+    },
+    "verifyChapterDetails": "चैप्टर विवरण सत्यापित करें",
+    "@verifyChapterDetails": {
+        "description": "Title for the screen where Live chapter details are verified before publishing."
+    },
+    "author": "लेखक",
+    "@author": {
+        "description": "Label for the author of a story or chapter."
+    },
+    "startLiveChapter": "लाइव चैप्टर शुरू करें",
+    "@startLiveChapter": {
+        "description": "Title for the screen where a live chapter is initiated."
+    },
+    "fillAllFields": "कृपया सभी आवश्यक फ़ील्ड भरें",
+    "@fillAllFields": {
+        "description": "Error message when required fields are not filled in a form."
+    },
+    "noRecordingError": "आपके पास कोई रिकॉर्डिंग नहीं है। लाइव चैप्टर रूम से बाहर निकलने के लिए, कृपया पहले रिकॉर्डिंग शुरू करें।",
+    "@noRecordingError": {
+        "description": "Error message when trying to exit a live chapter room without any recording."
+    },
+    "deleteMessageTitle": "संदेश हटाएँ",
+"@deleteMessageTitle": {
+  "description": "Title shown in the delete message confirmation dialog."
+},
+"deleteMessageContent": "क्या आप वाकई इस संदेश को हटाना चाहते हैं?",
+"@deleteMessageContent": {
+  "description": "Confirmation text asking the user if they want to delete a message."
+},
+"thisMessageWasDeleted": "यह संदेश हटा दिया गया है",
+"failedToDeleteMessage": "संदेश हटाने में विफल रहा"
+
+
 }

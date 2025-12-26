@@ -13,10 +13,15 @@ class RoomService {
 
   static Future<void> joinLiveKitRoom(
     String livekitUri,
-    String roomToken,
-  ) async {
+    String roomToken, {
+    bool isLiveChapter = false,
+  }) async {
     Get.put(
-      LiveKitController(liveKitUri: livekitUri, roomToken: roomToken),
+      LiveKitController(
+        liveKitUri: livekitUri,
+        roomToken: roomToken,
+        isLiveChapter: isLiveChapter,
+      ),
       permanent: true,
     );
   }
@@ -29,27 +34,26 @@ class RoomService {
     RoomsController roomsController = Get.find<RoomsController>();
 
     // Get all documents with participant uid and roomid and delete them before adding the participant again
-    DocumentList participantDocsRef = await roomsController.databases
-        .listDocuments(
-          databaseId: masterDatabaseId,
-          collectionId: participantsCollectionId,
-          queries: [
-            Query.equal("uid", [uid]),
-            Query.equal('roomId', [roomId]),
-          ],
-        );
-    for (var document in participantDocsRef.documents) {
-      await roomsController.databases.deleteDocument(
+    RowList participantDocsRef = await roomsController.tablesDB.listRows(
+      databaseId: masterDatabaseId,
+      tableId: participantsTableId,
+      queries: [
+        Query.equal("uid", [uid]),
+        Query.equal('roomId', [roomId]),
+      ],
+    );
+    for (var document in participantDocsRef.rows) {
+      await roomsController.tablesDB.deleteRow(
         databaseId: masterDatabaseId,
-        collectionId: participantsCollectionId,
-        documentId: document.$id,
+        tableId: participantsTableId,
+        rowId: document.$id,
       );
     }
     // Add participant to collection
-    Document participantDoc = await roomsController.databases.createDocument(
+    Row participantDoc = await roomsController.tablesDB.createRow(
       databaseId: masterDatabaseId,
-      collectionId: participantsCollectionId,
-      documentId: ID.unique().toString(),
+      tableId: participantsTableId,
+      rowId: ID.unique().toString(),
       data: {
         "roomId": roomId,
         "uid": uid,
@@ -61,21 +65,21 @@ class RoomService {
     );
     if (!isAdmin) {
       // Get present totalParticipants Attribute
-      Document roomDoc = await roomsController.databases.getDocument(
+      Row roomDoc = await roomsController.tablesDB.getRow(
         databaseId: masterDatabaseId,
-        collectionId: roomsCollectionId,
-        documentId: roomId,
+        tableId: roomsTableId,
+        rowId: roomId,
       );
 
       // Increment the totalParticipants Attribute
       int newParticipantCount =
           roomDoc.data["totalParticipants"] -
-          participantDocsRef.documents.length +
+          participantDocsRef.rows.length +
           1;
-      await roomsController.databases.updateDocument(
+      await roomsController.tablesDB.updateRow(
         databaseId: masterDatabaseId,
-        collectionId: roomsCollectionId,
-        documentId: roomId,
+        tableId: roomsTableId,
+        rowId: roomId,
         data: {"totalParticipants": newParticipantCount},
       );
     }
@@ -117,6 +121,53 @@ class RoomService {
     return [appwriteRoomDocId, myDocId];
   }
 
+  static Future<List<String>> createLiveChapterRoom({
+    required String appwriteRoomId,
+    required String adminUid,
+  }) async {
+    var response = await apiService.createLiveChapterRoom(
+      appwriteRoomId,
+      adminUid,
+    );
+    String appwriteRoomDocId = response["livekit_room"]["name"];
+    String livekitToken = response["access_token"];
+    String livekitSocketUrl =
+        response["livekit_socket_url"] == "wss://host.docker.internal:7880"
+        ? localhostLivekitEndpoint
+        : response["livekit_socket_url"];
+
+    // Store Livekit Url and Token in Secure Storage
+    const storage = FlutterSecureStorage();
+    await storage.write(key: "createdRoomAdminToken", value: livekitToken);
+    await storage.write(key: "createdRoomLivekitUrl", value: livekitSocketUrl);
+
+    await joinLiveKitRoom(livekitSocketUrl, livekitToken, isLiveChapter: true);
+
+    return [appwriteRoomDocId];
+  }
+
+  static Future<void> joinLiveChapterRoom({
+    required roomId,
+    required String userId,
+  }) async {
+    var response = await apiService.joinRoom(roomId, userId);
+    String livekitToken = response["access_token"];
+    String livekitSocketUrl =
+        response["livekit_socket_url"] == "wss://host.docker.internal:7880"
+        ? localhostLivekitEndpoint
+        : response["livekit_socket_url"];
+
+    await joinLiveKitRoom(livekitSocketUrl, livekitToken, isLiveChapter: true);
+  }
+
+  static Future deleteLiveChapterRoom({required roomId}) async {
+    const storage = FlutterSecureStorage();
+
+    // Delete room on livekit and roomdoc on appwrite
+    String? livekitToken = await storage.read(key: "createdRoomAdminToken");
+    await apiService.deleteLiveChapterRoom(roomId, livekitToken!);
+  }
+
   static Future deleteRoom({required roomId}) async {
     RoomsController roomsController = Get.find<RoomsController>();
     const storage = FlutterSecureStorage();
@@ -126,20 +177,19 @@ class RoomService {
     await apiService.deleteRoom(roomId, livekitToken!);
 
     // Get all participant documents and delete them
-    DocumentList participantDocsRef = await roomsController.databases
-        .listDocuments(
-          databaseId: masterDatabaseId,
-          collectionId: participantsCollectionId,
-          queries: [
-            Query.equal('roomId', [roomId]),
-          ],
-        );
+    RowList participantDocsRef = await roomsController.tablesDB.listRows(
+      databaseId: masterDatabaseId,
+      tableId: participantsTableId,
+      queries: [
+        Query.equal('roomId', [roomId]),
+      ],
+    );
 
-    for (var document in participantDocsRef.documents) {
-      await roomsController.databases.deleteDocument(
+    for (var document in participantDocsRef.rows) {
+      await roomsController.tablesDB.deleteRow(
         databaseId: masterDatabaseId,
-        collectionId: participantsCollectionId,
-        documentId: document.$id,
+        tableId: participantsTableId,
+        rowId: document.$id,
       );
     }
   }
@@ -169,50 +219,48 @@ class RoomService {
     RoomsController roomsController = Get.find<RoomsController>();
     String userId = Get.find<AuthStateController>().uid!;
 
-    Document roomDoc = await roomsController.databases.getDocument(
+    Row roomDoc = await roomsController.tablesDB.getRow(
       databaseId: masterDatabaseId,
-      collectionId: roomsCollectionId,
-      documentId: roomId,
+      tableId: roomsTableId,
+      rowId: roomId,
     );
 
     // Get all documents with participant uid and roomid and delete them
-    DocumentList participantDocsRef = await roomsController.databases
-        .listDocuments(
-          databaseId: masterDatabaseId,
-          collectionId: participantsCollectionId,
-          queries: [
-            Query.equal("uid", [userId]),
-            Query.equal('roomId', [roomId]),
-          ],
-        );
-    for (var document in participantDocsRef.documents) {
-      await roomsController.databases.deleteDocument(
+    RowList participantDocsRef = await roomsController.tablesDB.listRows(
+      databaseId: masterDatabaseId,
+      tableId: participantsTableId,
+      queries: [
+        Query.equal("uid", [userId]),
+        Query.equal('roomId', [roomId]),
+      ],
+    );
+    for (var document in participantDocsRef.rows) {
+      await roomsController.tablesDB.deleteRow(
         databaseId: masterDatabaseId,
-        collectionId: participantsCollectionId,
-        documentId: document.$id,
+        tableId: participantsTableId,
+        rowId: document.$id,
       );
     }
 
     // Get present totalParticipants Attribute
-    if (roomDoc.data["totalParticipants"] -
-            participantDocsRef.documents.length ==
+    if (roomDoc.data["totalParticipants"] - participantDocsRef.rows.length ==
         0) {
       // Delete the room since there are no participants
-      await roomsController.databases.deleteDocument(
+      await roomsController.tablesDB.deleteRow(
         databaseId: masterDatabaseId,
-        collectionId: roomsCollectionId,
-        documentId: roomId,
+        tableId: roomsTableId,
+        rowId: roomId,
       );
     } else {
       // Decrease the totalParticipants Attribute
-      await roomsController.databases.updateDocument(
+      await roomsController.tablesDB.updateRow(
         databaseId: masterDatabaseId,
-        collectionId: roomsCollectionId,
-        documentId: roomId,
+        tableId: roomsTableId,
+        rowId: roomId,
         data: {
           "totalParticipants":
               roomDoc.data["totalParticipants"] -
-              participantDocsRef.documents.length,
+              participantDocsRef.rows.length,
         },
       );
     }
